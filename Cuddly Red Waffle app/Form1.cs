@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cuddly_Red_Waffle_app
 {
-    public partial class Form1 : Form
+    public partial class mainPage : MenuInheritance.Form1
     {
-        public Form1()
+        public mainPage()
         {
             InitializeComponent();
         }
