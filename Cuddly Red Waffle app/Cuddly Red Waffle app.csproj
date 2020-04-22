@@ -89,6 +89,12 @@
     <Compile Include="AppClasses\Payment.cs" />
     <Compile Include="AppClasses\Product.cs" />
     <Compile Include="AppClasses\Request.cs" />
+    <Compile Include="ClientUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientUserControl.Designer.cs">
+      <DependentUpon>ClientUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
