@@ -54,7 +54,7 @@ namespace MenuInheritance
                 label.ForeColor = Color.White;
             }
 
-            contactLabel.ForeColor = Color.Black;
+            ordersLabel.ForeColor = Color.Black;
         }
 
         private void archiveLabel_Click(object sender, EventArgs e)
@@ -95,7 +95,6 @@ namespace MenuInheritance
                 label.ForeColor = Color.White;
             }
 
-            //Takes us to home page
         }
     }
 }

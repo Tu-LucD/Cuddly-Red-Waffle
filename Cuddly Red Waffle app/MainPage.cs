@@ -19,6 +19,7 @@ namespace Cuddly_Red_Waffle_app
 
         private void inventoryLabel_Click(object sender, EventArgs e)
         {
+            controlGroupBox.Controls.Clear();
             controlGroupBox.Controls.Add(new InventoryControl());
         }
 
@@ -27,10 +28,6 @@ namespace Cuddly_Red_Waffle_app
 
         }
 
-        private void contactLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void archiveLabel_Click(object sender, EventArgs e)
         {
@@ -39,7 +36,8 @@ namespace Cuddly_Red_Waffle_app
 
         private void requestLabel_Click(object sender, EventArgs e)
         {
-
+            controlGroupBox.Controls.Clear();
+            controlGroupBox.Controls.Add(new RequestsUserControl());
         }
 
         private void aboutLabel_Click(object sender, EventArgs e)
@@ -50,6 +48,23 @@ namespace Cuddly_Red_Waffle_app
         private void usanaLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mainPage_Load(object sender, EventArgs e)
+        {
+            controlGroupBox.Controls.Clear();
+            controlGroupBox.Controls.Add(new mainPageUserControl());
+        }
+
+        private void ordersLabel_Click(object sender, EventArgs e)
+        {
+            controlGroupBox.Controls.Clear();
+            controlGroupBox.Controls.Add(new OrderPage());
+        }
+
+        private void usanaPictureBox_Click(object sender, EventArgs e)
+        {
+            mainPage_Load(sender, e);
         }
     }
 }

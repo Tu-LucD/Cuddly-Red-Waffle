@@ -65,12 +65,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addClientForm.Designer.cs">
+      <DependentUpon>addClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addOrderForm.Designer.cs">
+      <DependentUpon>addOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRequestForm.Designer.cs">
+      <DependentUpon>addRequestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AppClasses\Client.cs" />
     <Compile Include="AppClasses\HealthCategory.cs" />
     <Compile Include="AppClasses\Order.cs" />
     <Compile Include="AppClasses\Payment.cs" />
     <Compile Include="AppClasses\Product.cs" />
     <Compile Include="AppClasses\Request.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +102,18 @@
     <Compile Include="InventoryControl.Designer.cs">
       <DependentUpon>InventoryControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="mainPageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainPageUserControl.Designer.cs">
+      <DependentUpon>mainPageUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderPage.Designer.cs">
+      <DependentUpon>OrderPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +122,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RequestsUserControl.Designer.cs">
+      <DependentUpon>RequestsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="USANA_DBDataSet.cs">
       <DependentUpon>USANA_DBDataSet.xsd</DependentUpon>
     </Compile>
@@ -99,11 +136,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>USANA_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addOrderForm.resx">
+      <DependentUpon>addOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRequestForm.resx">
+      <DependentUpon>addRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryControl.resx">
       <DependentUpon>InventoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPageUserControl.resx">
+      <DependentUpon>mainPageUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderPage.resx">
+      <DependentUpon>OrderPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductAddForm.resx">
       <DependentUpon>ProductAddForm.cs</DependentUpon>
@@ -117,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RequestsUserControl.resx">
+      <DependentUpon>RequestsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

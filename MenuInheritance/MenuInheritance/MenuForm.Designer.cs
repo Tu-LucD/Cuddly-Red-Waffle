@@ -33,7 +33,7 @@
             this.pagesPanel = new System.Windows.Forms.Panel();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.clientLabel = new System.Windows.Forms.Label();
-            this.contactLabel = new System.Windows.Forms.Label();
+            this.ordersLabel = new System.Windows.Forms.Label();
             this.archiveLabel = new System.Windows.Forms.Label();
             this.requestLabel = new System.Windows.Forms.Label();
             this.inventoryLabel = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             // 
             this.pagesPanel.Controls.Add(this.aboutLabel);
             this.pagesPanel.Controls.Add(this.clientLabel);
-            this.pagesPanel.Controls.Add(this.contactLabel);
+            this.pagesPanel.Controls.Add(this.ordersLabel);
             this.pagesPanel.Controls.Add(this.archiveLabel);
             this.pagesPanel.Controls.Add(this.requestLabel);
             this.pagesPanel.Controls.Add(this.inventoryLabel);
@@ -111,17 +111,17 @@
             this.clientLabel.Text = "Client";
             this.clientLabel.Click += new System.EventHandler(this.clientLabel_Click);
             // 
-            // contactLabel
+            // ordersLabel
             // 
-            this.contactLabel.AutoSize = true;
-            this.contactLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactLabel.ForeColor = System.Drawing.Color.White;
-            this.contactLabel.Location = new System.Drawing.Point(5, 140);
-            this.contactLabel.Name = "contactLabel";
-            this.contactLabel.Size = new System.Drawing.Size(73, 20);
-            this.contactLabel.TabIndex = 6;
-            this.contactLabel.Text = "Contacts";
-            this.contactLabel.Click += new System.EventHandler(this.contactLabel_Click);
+            this.ordersLabel.AutoSize = true;
+            this.ordersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordersLabel.ForeColor = System.Drawing.Color.White;
+            this.ordersLabel.Location = new System.Drawing.Point(5, 140);
+            this.ordersLabel.Name = "ordersLabel";
+            this.ordersLabel.Size = new System.Drawing.Size(57, 20);
+            this.ordersLabel.TabIndex = 6;
+            this.ordersLabel.Text = "Orders";
+            this.ordersLabel.Click += new System.EventHandler(this.contactLabel_Click);
             // 
             // archiveLabel
             // 
@@ -237,18 +237,18 @@
 
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.PictureBox usanaPictureBox;
         private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.PictureBox settingsPictureBox;
         private System.Windows.Forms.Panel pagesPanel;
         public System.Windows.Forms.Label archiveLabel;
         public System.Windows.Forms.Label usanaLabel;
-        public System.Windows.Forms.Label contactLabel;
+        public System.Windows.Forms.Label ordersLabel;
         public System.Windows.Forms.Label requestLabel;
         public System.Windows.Forms.Label clientLabel;
         public System.Windows.Forms.Label inventoryLabel;
         public System.Windows.Forms.Label aboutLabel;
         public System.Windows.Forms.GroupBox controlGroupBox;
+        public System.Windows.Forms.PictureBox usanaPictureBox;
     }
 }
 

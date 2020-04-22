@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ((System.ComponentModel.ISupportInitialize)(this.usanaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // archiveLabel
@@ -38,9 +39,9 @@
             // 
             this.usanaLabel.Click += new System.EventHandler(this.usanaLabel_Click);
             // 
-            // contactLabel
+            // ordersLabel
             // 
-            this.contactLabel.Click += new System.EventHandler(this.contactLabel_Click);
+            this.ordersLabel.Click += new System.EventHandler(this.ordersLabel_Click);
             // 
             // requestLabel
             // 
@@ -58,6 +59,10 @@
             // 
             this.aboutLabel.Click += new System.EventHandler(this.aboutLabel_Click);
             // 
+            // usanaPictureBox
+            // 
+            this.usanaPictureBox.Click += new System.EventHandler(this.usanaPictureBox_Click);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,6 +70,8 @@
             this.ClientSize = new System.Drawing.Size(800, 445);
             this.Name = "mainPage";
             this.Text = "Main Page";
+            this.Load += new System.EventHandler(this.mainPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usanaPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
