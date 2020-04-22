@@ -1,6 +1,6 @@
 ﻿namespace MenuInheritance
 {
-    partial class Form1
+    partial class MenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.headerPanel = new System.Windows.Forms.Panel();
             this.settingsPictureBox = new System.Windows.Forms.PictureBox();
             this.usanaPictureBox = new System.Windows.Forms.PictureBox();
+            this.controlGroupBox = new System.Windows.Forms.GroupBox();
             this.menuPanel.SuspendLayout();
             this.pagesPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -201,15 +202,24 @@
             this.usanaPictureBox.TabStop = false;
             this.usanaPictureBox.Click += new System.EventHandler(this.usanaPictureBox_Click);
             // 
-            // Form1
+            // controlGroupBox
+            // 
+            this.controlGroupBox.Location = new System.Drawing.Point(177, 40);
+            this.controlGroupBox.Name = "controlGroupBox";
+            this.controlGroupBox.Size = new System.Drawing.Size(607, 402);
+            this.controlGroupBox.TabIndex = 3;
+            this.controlGroupBox.TabStop = false;
+            // 
+            // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(784, 441);
+            this.Controls.Add(this.controlGroupBox);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.menuPanel);
-            this.Name = "Form1";
+            this.Name = "MenuForm";
             this.Text = "Form1";
             this.menuPanel.ResumeLayout(false);
             this.menuPanel.PerformLayout();
@@ -229,15 +239,16 @@
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.PictureBox usanaPictureBox;
         private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Label archiveLabel;
-        private System.Windows.Forms.Label usanaLabel;
-        private System.Windows.Forms.Label contactLabel;
-        private System.Windows.Forms.Label requestLabel;
-        private System.Windows.Forms.Label clientLabel;
-        private System.Windows.Forms.Label inventoryLabel;
-        private System.Windows.Forms.Label aboutLabel;
         private System.Windows.Forms.PictureBox settingsPictureBox;
         private System.Windows.Forms.Panel pagesPanel;
+        public System.Windows.Forms.Label archiveLabel;
+        public System.Windows.Forms.Label usanaLabel;
+        public System.Windows.Forms.Label contactLabel;
+        public System.Windows.Forms.Label requestLabel;
+        public System.Windows.Forms.Label clientLabel;
+        public System.Windows.Forms.Label inventoryLabel;
+        public System.Windows.Forms.Label aboutLabel;
+        public System.Windows.Forms.GroupBox controlGroupBox;
     }
 }
 

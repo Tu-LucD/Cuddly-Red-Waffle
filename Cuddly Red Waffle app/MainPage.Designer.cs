@@ -28,34 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainPageUserControl1 = new Cuddly_Red_Waffle_app.mainPageUserControl();
             this.SuspendLayout();
             // 
-            // mainPageUserControl1
+            // archiveLabel
             // 
-            this.mainPageUserControl1.Location = new System.Drawing.Point(180, 40);
-            this.mainPageUserControl1.Name = "mainPageUserControl1";
-            this.mainPageUserControl1.Size = new System.Drawing.Size(620, 402);
-            this.mainPageUserControl1.TabIndex = 4;
+            this.archiveLabel.Click += new System.EventHandler(this.archiveLabel_Click);
+            // 
+            // usanaLabel
+            // 
+            this.usanaLabel.Click += new System.EventHandler(this.usanaLabel_Click);
+            // 
+            // contactLabel
+            // 
+            this.contactLabel.Click += new System.EventHandler(this.contactLabel_Click);
+            // 
+            // requestLabel
+            // 
+            this.requestLabel.Click += new System.EventHandler(this.requestLabel_Click);
+            // 
+            // clientLabel
+            // 
+            this.clientLabel.Click += new System.EventHandler(this.clientLabel_Click);
+            // 
+            // inventoryLabel
+            // 
+            this.inventoryLabel.Click += new System.EventHandler(this.inventoryLabel_Click);
+            // 
+            // aboutLabel
+            // 
+            this.aboutLabel.Click += new System.EventHandler(this.aboutLabel_Click);
             // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 442);
-            this.Controls.Add(this.mainPageUserControl1);
-            this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 445);
             this.Name = "mainPage";
             this.Text = "Main Page";
-            this.Controls.SetChildIndex(this.mainPageUserControl1, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private mainPageUserControl mainPageUserControl1;
     }
 }
 
