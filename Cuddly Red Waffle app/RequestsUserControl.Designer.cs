@@ -48,7 +48,7 @@
             this.requestItemsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.requestItemsListBox.FormattingEnabled = true;
             this.requestItemsListBox.ItemHeight = 20;
-            this.requestItemsListBox.Location = new System.Drawing.Point(307, 127);
+            this.requestItemsListBox.Location = new System.Drawing.Point(303, 125);
             this.requestItemsListBox.Name = "requestItemsListBox";
             this.requestItemsListBox.Size = new System.Drawing.Size(235, 224);
             this.requestItemsListBox.TabIndex = 1;
@@ -56,21 +56,21 @@
             // requestTitleLabel
             // 
             this.requestTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.requestTitleLabel.Location = new System.Drawing.Point(303, 39);
+            this.requestTitleLabel.Location = new System.Drawing.Point(299, 39);
             this.requestTitleLabel.Name = "requestTitleLabel";
             this.requestTitleLabel.Size = new System.Drawing.Size(235, 72);
             this.requestTitleLabel.TabIndex = 2;
             this.requestTitleLabel.Text = "Insert request info";
             this.requestTitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Requests
+            // RequestsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.requestTitleLabel);
             this.Controls.Add(this.requestItemsListBox);
             this.Controls.Add(this.requestsListBox);
-            this.Name = "Requests";
+            this.Name = "RequestsUserControl";
             this.Size = new System.Drawing.Size(545, 397);
             this.ResumeLayout(false);
 
