@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cuddly_Red_Waffle_app
-{
+{ 
     public partial class RequestsUserControl : UserControl
     {
         public RequestsUserControl()
