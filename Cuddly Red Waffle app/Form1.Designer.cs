@@ -28,20 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.mainPageUserControl1 = new Cuddly_Red_Waffle_app.mainPageUserControl();
             this.SuspendLayout();
+            // 
+            // mainPageUserControl1
+            // 
+            this.mainPageUserControl1.Location = new System.Drawing.Point(180, 40);
+            this.mainPageUserControl1.Name = "mainPageUserControl1";
+            this.mainPageUserControl1.Size = new System.Drawing.Size(620, 402);
+            this.mainPageUserControl1.TabIndex = 4;
             // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 442);
+            this.Controls.Add(this.mainPageUserControl1);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mainPage";
             this.Text = "Main Page";
+            this.Controls.SetChildIndex(this.mainPageUserControl1, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private mainPageUserControl mainPageUserControl1;
     }
 }
 
