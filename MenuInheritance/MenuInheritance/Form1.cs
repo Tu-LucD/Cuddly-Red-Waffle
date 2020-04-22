@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MenuInheritance
 {
-    public partial class MenuForm : Form
+    public partial class Form1 : Form
     {
-        public MenuForm()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -34,7 +34,6 @@ namespace MenuInheritance
             }
            
             inventoryLabel.ForeColor = Color.Black;
-
         }
 
         private void requestLabel_Click(object sender, EventArgs e)
