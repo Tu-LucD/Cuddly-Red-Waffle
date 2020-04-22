@@ -65,6 +65,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addClientForm.Designer.cs">
+      <DependentUpon>addClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addOrderForm.Designer.cs">
+      <DependentUpon>addOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRequestForm.Designer.cs">
+      <DependentUpon>addRequestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="mainPageUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="mainPageUserControl.Designer.cs">
+      <DependentUpon>mainPageUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,8 +110,17 @@
     <Compile Include="Requests.Designer.cs">
       <DependentUpon>Requests.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addOrderForm.resx">
+      <DependentUpon>addOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRequestForm.resx">
+      <DependentUpon>addRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainPageUserControl.resx">
+      <DependentUpon>mainPageUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderPage.resx">
       <DependentUpon>OrderPage.cs</DependentUpon>
