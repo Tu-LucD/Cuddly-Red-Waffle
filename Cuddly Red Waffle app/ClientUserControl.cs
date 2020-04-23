@@ -17,20 +17,7 @@ namespace Cuddly_Red_Waffle_app
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 
     //you can use the mainPageUserControl for sizes and color references :)a

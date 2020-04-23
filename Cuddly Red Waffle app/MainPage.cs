@@ -25,7 +25,8 @@ namespace Cuddly_Red_Waffle_app
 
         private void clientLabel_Click(object sender, EventArgs e)
         {
-
+            controlGroupBox.Controls.Clear();
+            controlGroupBox.Controls.Add(new ClientUserControl());
         }
 
 

@@ -66,7 +66,6 @@
             this.PersonalInfo.TabIndex = 1;
             this.PersonalInfo.TabStop = false;
             this.PersonalInfo.Text = "personal info";
-            this.PersonalInfo.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ageCenter
             // 
@@ -131,7 +130,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // additionalCenter
             // 
@@ -139,7 +137,6 @@
             this.additionalCenter.Name = "additionalCenter";
             this.additionalCenter.Size = new System.Drawing.Size(208, 20);
             this.additionalCenter.TabIndex = 8;
-            this.additionalCenter.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // additionalInfo
             // 
