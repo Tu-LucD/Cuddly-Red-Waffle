@@ -59,6 +59,10 @@
             // 
             this.aboutLabel.Click += new System.EventHandler(this.aboutLabel_Click);
             // 
+            // controlGroupBox
+            // 
+            this.controlGroupBox.Text = "w ";
+            // 
             // usanaPictureBox
             // 
             this.usanaPictureBox.Click += new System.EventHandler(this.usanaPictureBox_Click);
