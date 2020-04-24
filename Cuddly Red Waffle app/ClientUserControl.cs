@@ -17,14 +17,9 @@ namespace Cuddly_Red_Waffle_app
             InitializeComponent();
         }
 
-        
+        private void ClientUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-
-    //you can use the mainPageUserControl for sizes and color references :)a
-    // alright , thanks so now i can just make it rigth in the clientusercontrol rigth ?
-    //yeah, idk what just happened xd
-    // well is more pratice, and is quite fun
-    //okay, make sure to always change the name of your objects here
-    // yeah i know, i already do that, i saw it on youtube haha
-
 }

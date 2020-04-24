@@ -142,6 +142,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>USANA_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addClientForm.resx">
+      <DependentUpon>addClientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addOrderForm.resx">
       <DependentUpon>addOrderForm.cs</DependentUpon>
     </EmbeddedResource>

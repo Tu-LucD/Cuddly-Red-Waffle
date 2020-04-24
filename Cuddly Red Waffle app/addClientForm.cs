@@ -17,5 +17,9 @@ namespace Cuddly_Red_Waffle_app
             InitializeComponent();
         }
 
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

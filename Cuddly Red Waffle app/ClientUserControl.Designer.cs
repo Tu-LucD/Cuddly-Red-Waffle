@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.PersonalInfo = new System.Windows.Forms.GroupBox();
+            this.additionalInfo = new System.Windows.Forms.Label();
+            this.additionalCenter = new System.Windows.Forms.TextBox();
             this.ageCenter = new System.Windows.Forms.TextBox();
             this.emailCenter = new System.Windows.Forms.TextBox();
             this.nameCenter = new System.Windows.Forms.TextBox();
@@ -37,11 +39,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.additionalCenter = new System.Windows.Forms.TextBox();
-            this.additionalInfo = new System.Windows.Forms.Label();
             this.ClientsCenter = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label5 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label6 = new System.Windows.Forms.Label();
             this.PersonalInfo.SuspendLayout();
             this.ClientsCenter.SuspendLayout();
@@ -66,6 +66,22 @@
             this.PersonalInfo.TabIndex = 1;
             this.PersonalInfo.TabStop = false;
             this.PersonalInfo.Text = "personal info";
+            // 
+            // additionalInfo
+            // 
+            this.additionalInfo.AutoSize = true;
+            this.additionalInfo.Location = new System.Drawing.Point(80, 132);
+            this.additionalInfo.Name = "additionalInfo";
+            this.additionalInfo.Size = new System.Drawing.Size(107, 13);
+            this.additionalInfo.TabIndex = 9;
+            this.additionalInfo.Text = "additional Information";
+            // 
+            // additionalCenter
+            // 
+            this.additionalCenter.Location = new System.Drawing.Point(25, 148);
+            this.additionalCenter.Name = "additionalCenter";
+            this.additionalCenter.Size = new System.Drawing.Size(208, 20);
+            this.additionalCenter.TabIndex = 8;
             // 
             // ageCenter
             // 
@@ -131,22 +147,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // additionalCenter
-            // 
-            this.additionalCenter.Location = new System.Drawing.Point(25, 148);
-            this.additionalCenter.Name = "additionalCenter";
-            this.additionalCenter.Size = new System.Drawing.Size(208, 20);
-            this.additionalCenter.TabIndex = 8;
-            // 
-            // additionalInfo
-            // 
-            this.additionalInfo.AutoSize = true;
-            this.additionalInfo.Location = new System.Drawing.Point(80, 132);
-            this.additionalInfo.Name = "additionalInfo";
-            this.additionalInfo.Size = new System.Drawing.Size(107, 13);
-            this.additionalInfo.TabIndex = 9;
-            this.additionalInfo.Text = "additional Information";
-            // 
             // ClientsCenter
             // 
             this.ClientsCenter.Controls.Add(this.label5);
@@ -186,6 +186,7 @@
             this.Controls.Add(this.PersonalInfo);
             this.Name = "ClientUserControl";
             this.Size = new System.Drawing.Size(472, 354);
+            this.Load += new System.EventHandler(this.ClientUserControl_Load);
             this.PersonalInfo.ResumeLayout(false);
             this.PersonalInfo.PerformLayout();
             this.ClientsCenter.ResumeLayout(false);
