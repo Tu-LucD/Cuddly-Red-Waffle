@@ -104,6 +104,7 @@
             this.productNameText.Name = "productNameText";
             this.productNameText.Size = new System.Drawing.Size(100, 20);
             this.productNameText.TabIndex = 4;
+            this.productNameText.TextChanged += new System.EventHandler(this.productNameText_TextChanged);
             // 
             // healthText
             // 

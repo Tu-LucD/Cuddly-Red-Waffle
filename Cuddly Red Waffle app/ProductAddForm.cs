@@ -42,5 +42,10 @@ namespace Cuddly_Red_Waffle_app
         {
             this.Close();
         }
+
+        private void productNameText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label6 = new System.Windows.Forms.Label();
+            this.addClientButton = new System.Windows.Forms.Button();
             this.PersonalInfo.SuspendLayout();
             this.ClientsCenter.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +104,7 @@
             this.nameCenter.Name = "nameCenter";
             this.nameCenter.Size = new System.Drawing.Size(95, 20);
             this.nameCenter.TabIndex = 5;
+            this.nameCenter.TextChanged += new System.EventHandler(this.nameCenter_TextChanged);
             // 
             // phoneCenter
             // 
@@ -176,11 +178,27 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Client";
             // 
+            // addClientButton
+            // 
+            this.addClientButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addClientButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.addClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addClientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addClientButton.Location = new System.Drawing.Point(23, 298);
+            this.addClientButton.Name = "addClientButton";
+            this.addClientButton.Size = new System.Drawing.Size(180, 30);
+            this.addClientButton.TabIndex = 12;
+            this.addClientButton.Text = "Add Client";
+            this.addClientButton.UseVisualStyleBackColor = false;
+            this.addClientButton.Click += new System.EventHandler(this.addClientButton_Click);
+            // 
             // ClientUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.addClientButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ClientsCenter);
             this.Controls.Add(this.PersonalInfo);
@@ -213,5 +231,6 @@
         private System.Windows.Forms.Label label5;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button addClientButton;
     }
 }

@@ -21,5 +21,16 @@ namespace Cuddly_Red_Waffle_app
         {
 
         }
+
+        private void nameCenter_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addClientButton_Click(object sender, EventArgs e)
+        {
+            addClientForm add = new addClientForm();
+            add.Show();
+        }
     }
 }
