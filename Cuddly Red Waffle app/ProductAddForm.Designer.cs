@@ -44,106 +44,117 @@
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.ProductsTableAdapter();
             this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.cancelBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(12, 110);
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(30, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pref. Price";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Text = "Pref. Price:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(12, 58);
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(30, 65);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Health Category";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Text = "Health Category:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(12, 32);
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.Location = new System.Drawing.Point(30, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Product Name";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Text = "Product Name:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(12, 84);
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(30, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Retail Price";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Text = "Retail Price:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // productNameText
             // 
-            this.productNameText.Location = new System.Drawing.Point(125, 32);
+            this.productNameText.Location = new System.Drawing.Point(138, 40);
             this.productNameText.Name = "productNameText";
             this.productNameText.Size = new System.Drawing.Size(100, 20);
             this.productNameText.TabIndex = 4;
             // 
             // healthText
             // 
-            this.healthText.Location = new System.Drawing.Point(125, 58);
+            this.healthText.Location = new System.Drawing.Point(138, 65);
             this.healthText.Name = "healthText";
             this.healthText.Size = new System.Drawing.Size(100, 20);
             this.healthText.TabIndex = 5;
             // 
             // retailText
             // 
-            this.retailText.Location = new System.Drawing.Point(125, 84);
+            this.retailText.Location = new System.Drawing.Point(138, 90);
             this.retailText.Name = "retailText";
             this.retailText.Size = new System.Drawing.Size(100, 20);
             this.retailText.TabIndex = 6;
             // 
             // prefPriceText
             // 
-            this.prefPriceText.Location = new System.Drawing.Point(125, 110);
+            this.prefPriceText.Location = new System.Drawing.Point(138, 115);
             this.prefPriceText.Name = "prefPriceText";
             this.prefPriceText.Size = new System.Drawing.Size(100, 20);
             this.prefPriceText.TabIndex = 7;
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(71, 172);
+            this.addBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(87, 181);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 23);
             this.addBtn.TabIndex = 8;
-            this.addBtn.Text = "Add Product";
-            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = false;
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(12, 136);
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(30, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "VVP";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Text = "VVP:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // vvpText
             // 
-            this.vvpText.Location = new System.Drawing.Point(125, 136);
+            this.vvpText.Location = new System.Drawing.Point(138, 140);
             this.vvpText.Name = "vvpText";
             this.vvpText.Size = new System.Drawing.Size(100, 20);
             this.vvpText.TabIndex = 10;
@@ -173,11 +184,41 @@
             this.tableAdapterManager.RequestTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // headerLabel
+            // 
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.headerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.White;
+            this.headerLabel.Location = new System.Drawing.Point(0, 0);
+            this.headerLabel.MinimumSize = new System.Drawing.Size(285, 20);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(285, 20);
+            this.headerLabel.TabIndex = 11;
+            this.headerLabel.Text = "Inpur your product information here!";
+            this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn.Location = new System.Drawing.Point(177, 181);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.cancelBtn.TabIndex = 12;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // ProductAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 262);
+            this.ClientSize = new System.Drawing.Size(276, 216);
+            this.Controls.Add(this.cancelBtn);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.vvpText);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.addBtn);
@@ -215,5 +256,7 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private USANA_DBDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
         private USANA_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

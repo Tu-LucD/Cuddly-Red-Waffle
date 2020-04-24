@@ -38,5 +38,9 @@ namespace Cuddly_Red_Waffle_app
 
         }
 
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

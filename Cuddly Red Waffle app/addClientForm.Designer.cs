@@ -107,42 +107,42 @@
             // 
             // firstNametextBox
             // 
-            this.firstNametextBox.Location = new System.Drawing.Point(135, 39);
+            this.firstNametextBox.Location = new System.Drawing.Point(135, 40);
             this.firstNametextBox.Name = "firstNametextBox";
             this.firstNametextBox.Size = new System.Drawing.Size(100, 20);
             this.firstNametextBox.TabIndex = 6;
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(135, 64);
+            this.lastNameTextBox.Location = new System.Drawing.Point(135, 65);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.lastNameTextBox.TabIndex = 8;
             // 
             // phoneNumberTextBox
             // 
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(135, 88);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(135, 90);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(100, 20);
             this.phoneNumberTextBox.TabIndex = 9;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(135, 114);
+            this.emailTextBox.Location = new System.Drawing.Point(135, 115);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(100, 20);
             this.emailTextBox.TabIndex = 10;
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(135, 139);
+            this.addressTextBox.Location = new System.Drawing.Point(135, 140);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(100, 20);
             this.addressTextBox.TabIndex = 11;
             // 
             // categoryTextBox
             // 
-            this.categoryTextBox.Location = new System.Drawing.Point(135, 164);
+            this.categoryTextBox.Location = new System.Drawing.Point(135, 165);
             this.categoryTextBox.Name = "categoryTextBox";
             this.categoryTextBox.Size = new System.Drawing.Size(100, 20);
             this.categoryTextBox.TabIndex = 12;
@@ -173,6 +173,7 @@
             this.addButton.TabIndex = 14;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // cancelButton
             // 

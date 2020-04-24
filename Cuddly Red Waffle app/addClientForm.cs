@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cuddly_Red_Waffle_app.AppClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,24 @@ namespace Cuddly_Red_Waffle_app
         {
             this.Close();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            string firstName = firstNametextBox.Text;
+            string lastName = lastNameTextBox.Text;
+            string phoneNumber = phoneNumberTextBox.Text;
+            string email = emailTextBox.Text;
+            string address = addressTextBox.Text;
+            int category = int.Parse(categoryTextBox.Text);
+
+            Client newClient = new Client(1, firstName, lastName, email, address, phoneNumber, category);
+
+            /*newClient.CreateClientRow();
+
+            this.Validate();
+            this.clientsBindingSource.EndEdit();
+            this.tableAdapaterManager.UpdateAll(this.uSANA_DBDataSet);*/
+        }
+
     }
 }
