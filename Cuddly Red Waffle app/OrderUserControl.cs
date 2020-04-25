@@ -55,5 +55,11 @@ namespace Cuddly_Red_Waffle_app
         {
 
         }
+
+        private void addOrderButton_Click(object sender, EventArgs e)
+        {
+            addOrderForm add = new addOrderForm();
+            add.Show();
+        }
     }
 }

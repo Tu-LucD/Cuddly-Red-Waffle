@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.orderListBox = new System.Windows.Forms.ListBox();
             this.addOrderButton = new System.Windows.Forms.Button();
             this.myOrdersLabel = new System.Windows.Forms.Label();
@@ -45,28 +46,32 @@
             this.orderSentDate = new System.Windows.Forms.Label();
             this.orderPlacedDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordersTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.OrdersTableAdapter();
+            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.orderInfoTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // orderListBox
             // 
+            this.orderListBox.DataSource = this.ordersBindingSource;
+            this.orderListBox.DisplayMember = "OrderID";
             this.orderListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderListBox.FormattingEnabled = true;
             this.orderListBox.HorizontalScrollbar = true;
-            this.orderListBox.ItemHeight = 16;
-            this.orderListBox.Items.AddRange(new object[] {
-            "Order #1",
-            "Order #2",
-            "Order #3",
-            "Order #4",
-            "Order #5"});
+            this.orderListBox.ItemHeight = 20;
             this.orderListBox.Location = new System.Drawing.Point(55, 53);
             this.orderListBox.Name = "orderListBox";
-            this.orderListBox.Size = new System.Drawing.Size(190, 276);
+            this.orderListBox.Size = new System.Drawing.Size(190, 264);
             this.orderListBox.Sorted = true;
             this.orderListBox.TabIndex = 0;
+            this.orderListBox.ValueMember = "OrderID";
             this.orderListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // addOrderButton
@@ -82,6 +87,7 @@
             this.addOrderButton.TabIndex = 1;
             this.addOrderButton.Text = "Add Order";
             this.addOrderButton.UseVisualStyleBackColor = false;
+            this.addOrderButton.Click += new System.EventHandler(this.addOrderButton_Click);
             // 
             // myOrdersLabel
             // 
@@ -132,10 +138,10 @@
             // 
             this.tabPage1.Controls.Add(this.orderProductList);
             this.tabPage1.Controls.Add(this.totalPointsLabel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(232, 275);
+            this.tabPage1.Size = new System.Drawing.Size(232, 270);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Products";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -143,18 +149,16 @@
             // orderProductList
             // 
             this.orderProductList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.orderProductList.DataSource = this.ordersBindingSource1;
+            this.orderProductList.DisplayMember = "Product In order";
             this.orderProductList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderProductList.FormattingEnabled = true;
-            this.orderProductList.ItemHeight = 16;
-            this.orderProductList.Items.AddRange(new object[] {
-            "- Vita Antioxidant |45pts",
-            "- HealthPak |25pts",
-            "- CoQuinone 30 |15pts",
-            "- Visionex DS |65pts"});
+            this.orderProductList.ItemHeight = 20;
             this.orderProductList.Location = new System.Drawing.Point(1, 16);
             this.orderProductList.Name = "orderProductList";
-            this.orderProductList.Size = new System.Drawing.Size(229, 176);
+            this.orderProductList.Size = new System.Drawing.Size(229, 160);
             this.orderProductList.TabIndex = 0;
+            this.orderProductList.ValueMember = "Product In order";
             // 
             // totalPointsLabel
             // 
@@ -183,10 +187,10 @@
             this.tabPage2.Controls.Add(this.orderPlacedDate);
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(232, 275);
+            this.tabPage2.Size = new System.Drawing.Size(232, 270);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Order Status";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -228,7 +232,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(10, 150);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 16);
+            this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Order Delivered";
             // 
@@ -238,7 +242,7 @@
             this.orderDeliveredDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderDeliveredDate.Location = new System.Drawing.Point(35, 170);
             this.orderDeliveredDate.Name = "orderDeliveredDate";
-            this.orderDeliveredDate.Size = new System.Drawing.Size(85, 16);
+            this.orderDeliveredDate.Size = new System.Drawing.Size(109, 20);
             this.orderDeliveredDate.TabIndex = 4;
             this.orderDeliveredDate.Text = "May 1st 2020";
             // 
@@ -248,7 +252,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(10, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 16);
+            this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 3;
             this.label6.Text = "Order Sent";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -259,7 +263,7 @@
             this.orderSentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderSentDate.Location = new System.Drawing.Point(35, 110);
             this.orderSentDate.Name = "orderSentDate";
-            this.orderSentDate.Size = new System.Drawing.Size(93, 16);
+            this.orderSentDate.Size = new System.Drawing.Size(121, 20);
             this.orderSentDate.TabIndex = 2;
             this.orderSentDate.Text = "April 27th 2020";
             // 
@@ -269,7 +273,7 @@
             this.orderPlacedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderPlacedDate.Location = new System.Drawing.Point(35, 50);
             this.orderPlacedDate.Name = "orderPlacedDate";
-            this.orderPlacedDate.Size = new System.Drawing.Size(93, 16);
+            this.orderPlacedDate.Size = new System.Drawing.Size(121, 20);
             this.orderPlacedDate.TabIndex = 1;
             this.orderPlacedDate.Text = "April 20th 2020";
             this.orderPlacedDate.Click += new System.EventHandler(this.label4_Click);
@@ -280,14 +284,33 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Order Placed";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // uSANA_DBDataSet
+            // 
+            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
+            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "Orders";
+            this.ordersBindingSource.DataSource = this.uSANA_DBDataSet;
+            // 
+            // ordersTableAdapter
+            // 
+            this.ordersTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordersBindingSource1
+            // 
+            this.ordersBindingSource1.DataMember = "Orders";
+            this.ordersBindingSource1.DataSource = this.uSANA_DBDataSet;
+            // 
             // OrderUserControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.orderInfoTab);
             this.Controls.Add(this.orderDetailsLabel);
@@ -303,6 +326,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +353,9 @@
         private System.Windows.Forms.Label totalPointsLabel;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label estimatedDeliveryDate;
+        private System.Windows.Forms.BindingSource ordersBindingSource;
+        private USANA_DBDataSet uSANA_DBDataSet;
+        private System.Windows.Forms.BindingSource ordersBindingSource1;
+        private USANA_DBDataSetTableAdapters.OrdersTableAdapter ordersTableAdapter;
     }
 }

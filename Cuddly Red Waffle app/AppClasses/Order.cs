@@ -16,6 +16,9 @@ namespace Cuddly_Red_Waffle_app.AppClasses
         private bool isDelivered;
         private DateTime arrivalDate;
 
+        public USANA_DBDataSetTableAdapters.OrdersTableAdapter OrdersTable =
+            new USANA_DBDataSetTableAdapters.OrdersTableAdapter();
+
         public Order(int orderID, int productInOrder, int totalPoints, 
             bool isPlaced, bool isShipped, bool isDelivered, DateTime arrivalDate)
         {
@@ -27,6 +30,14 @@ namespace Cuddly_Red_Waffle_app.AppClasses
             IsDelivered = isDelivered;
             ArrivalDate = arrivalDate;
         }
+
+        public void CreateOrderRow()
+        {
+            OrdersTable.Insert(ProductInOrder, TotalPoints, IsPlaced, IsShipped, IsDelivered, ArrivalDate);
+
+            OrdersTable.Update(OrdersTable.GetData());
+        }
+
 
         public int OrderID { get => orderID; set => orderID = value; }
         public int ProductInOrder { get => productInOrder; set => productInOrder = value; }
