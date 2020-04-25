@@ -61,6 +61,8 @@
             // 
             // controlGroupBox
             // 
+            this.controlGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.controlGroupBox.Size = new System.Drawing.Size(623, 402);
             this.controlGroupBox.Text = "w ";
             // 
             // usanaPictureBox
@@ -71,7 +73,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 445);
+            this.ClientSize = new System.Drawing.Size(800, 442);
             this.Name = "mainPage";
             this.Text = "Main Page";
             this.Load += new System.EventHandler(this.mainPage_Load);

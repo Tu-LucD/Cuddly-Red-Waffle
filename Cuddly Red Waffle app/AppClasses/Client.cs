@@ -16,16 +16,29 @@ namespace Cuddly_Red_Waffle_app.AppClasses
         private string phone;
         private int healthCategory;
 
-        public Client(int clientID, string firstName, string lastName, string emailAddress, 
+        public USANA_DBDataSetTableAdapters.ClientTableAdapter clientsTable =
+               new USANA_DBDataSetTableAdapters.ClientTableAdapter();
+
+
+        public Client(string firstName, string lastName, string emailAddress,
             string address, string phone, int healthCategory)
         {
-            ClientID = clientID;
             FirstName = firstName;
             LastName = lastName;
             EmailAddress = emailAddress;
             Address = address;
             Phone = phone;
             HealthCategory = healthCategory;
+        }
+
+        public void CreateClientRow()
+        {
+            clientsTable.InsertIntoClient(FirstName, LastName,
+               EmailAddress, Address, Phone, HealthCategory);
+
+
+            clientsTable.Update(clientsTable.GetData());
+
         }
 
         public string FirstName { get => firstName; set => firstName = value; }

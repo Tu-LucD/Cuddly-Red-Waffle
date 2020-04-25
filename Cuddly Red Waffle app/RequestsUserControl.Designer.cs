@@ -38,9 +38,9 @@
             this.requestsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.requestsListBox.FormattingEnabled = true;
             this.requestsListBox.ItemHeight = 20;
-            this.requestsListBox.Location = new System.Drawing.Point(16, 20);
+            this.requestsListBox.Location = new System.Drawing.Point(40, 45);
             this.requestsListBox.Name = "requestsListBox";
-            this.requestsListBox.Size = new System.Drawing.Size(235, 364);
+            this.requestsListBox.Size = new System.Drawing.Size(212, 304);
             this.requestsListBox.TabIndex = 0;
             // 
             // requestItemsListBox
@@ -48,7 +48,7 @@
             this.requestItemsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.requestItemsListBox.FormattingEnabled = true;
             this.requestItemsListBox.ItemHeight = 20;
-            this.requestItemsListBox.Location = new System.Drawing.Point(303, 125);
+            this.requestItemsListBox.Location = new System.Drawing.Point(283, 125);
             this.requestItemsListBox.Name = "requestItemsListBox";
             this.requestItemsListBox.Size = new System.Drawing.Size(235, 224);
             this.requestItemsListBox.TabIndex = 1;
@@ -56,7 +56,7 @@
             // requestTitleLabel
             // 
             this.requestTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.requestTitleLabel.Location = new System.Drawing.Point(299, 39);
+            this.requestTitleLabel.Location = new System.Drawing.Point(283, 45);
             this.requestTitleLabel.Name = "requestTitleLabel";
             this.requestTitleLabel.Size = new System.Drawing.Size(235, 72);
             this.requestTitleLabel.TabIndex = 2;

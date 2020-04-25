@@ -19,12 +19,7 @@ namespace Cuddly_Red_Waffle_app
 
         private void ClientUserControl_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void nameCenter_TextChanged(object sender, EventArgs e)
-        {
-
+            this.clientTableAdapter.Fill(this.uSANA_DBDataSet.Client);
         }
 
         private void addClientButton_Click(object sender, EventArgs e)

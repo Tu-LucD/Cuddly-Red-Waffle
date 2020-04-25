@@ -51,5 +51,7 @@ namespace Cuddly_Red_Waffle_app
             //this.productsTableAdapter.Update(this.uSANA_DBDataSet.Products);
             //InventoryControl_Load(sender, e);
         }
+
+        
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.lastNameLabel = new System.Windows.Forms.Label();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
@@ -43,6 +44,12 @@
             this.headerLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.ClientTableAdapter();
+            this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // firstNameLabel
@@ -189,11 +196,36 @@
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // uSANA_DBDataSet
+            // 
+            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
+            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataMember = "Client";
+            this.clientBindingSource.DataSource = this.uSANA_DBDataSet;
+            // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientTableAdapter = this.clientTableAdapter;
+            this.tableAdapterManager.HealthCategoryTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.RequestTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // addClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 236);
+            this.ClientSize = new System.Drawing.Size(284, 242);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.headerLabel);
@@ -211,6 +243,9 @@
             this.Controls.Add(this.firstNameLabel);
             this.Name = "addClientForm";
             this.Text = "Add Client";
+            this.Load += new System.EventHandler(this.addClientForm_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +268,9 @@
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button cancelButton;
+        private USANA_DBDataSet uSANA_DBDataSet;
+        private System.Windows.Forms.BindingSource clientBindingSource;
+        private USANA_DBDataSetTableAdapters.ClientTableAdapter clientTableAdapter;
+        private USANA_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
