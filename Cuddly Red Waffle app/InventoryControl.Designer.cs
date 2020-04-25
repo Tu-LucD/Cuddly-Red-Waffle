@@ -54,6 +54,7 @@
             this.productsTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.ProductsTableAdapter();
             this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
             this.removeBtn = new System.Windows.Forms.Button();
+            this.productDetailsLabel = new System.Windows.Forms.Label();
             preferential_Price_With_TaxesLabel = new System.Windows.Forms.Label();
             retail_Price_With_TaxLabel = new System.Windows.Forms.Label();
             health_CategoryLabel = new System.Windows.Forms.Label();
@@ -69,36 +70,40 @@
             // preferential_Price_With_TaxesLabel
             // 
             preferential_Price_With_TaxesLabel.AutoSize = true;
-            preferential_Price_With_TaxesLabel.Location = new System.Drawing.Point(3, 202);
+            preferential_Price_With_TaxesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            preferential_Price_With_TaxesLabel.Location = new System.Drawing.Point(3, 198);
             preferential_Price_With_TaxesLabel.Name = "preferential_Price_With_TaxesLabel";
-            preferential_Price_With_TaxesLabel.Size = new System.Drawing.Size(131, 13);
+            preferential_Price_With_TaxesLabel.Size = new System.Drawing.Size(164, 16);
             preferential_Price_With_TaxesLabel.TabIndex = 10;
             preferential_Price_With_TaxesLabel.Text = "Preferential Price + Taxes:";
             // 
             // retail_Price_With_TaxLabel
             // 
             retail_Price_With_TaxLabel.AutoSize = true;
-            retail_Price_With_TaxLabel.Location = new System.Drawing.Point(3, 226);
+            retail_Price_With_TaxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            retail_Price_With_TaxLabel.Location = new System.Drawing.Point(3, 223);
             retail_Price_With_TaxLabel.Name = "retail_Price_With_TaxLabel";
-            retail_Price_With_TaxLabel.Size = new System.Drawing.Size(94, 13);
+            retail_Price_With_TaxLabel.Size = new System.Drawing.Size(116, 16);
             retail_Price_With_TaxLabel.TabIndex = 11;
             retail_Price_With_TaxLabel.Text = "Retail Price + Tax:";
             // 
             // health_CategoryLabel
             // 
             health_CategoryLabel.AutoSize = true;
-            health_CategoryLabel.Location = new System.Drawing.Point(3, 255);
+            health_CategoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            health_CategoryLabel.Location = new System.Drawing.Point(3, 248);
             health_CategoryLabel.Name = "health_CategoryLabel";
-            health_CategoryLabel.Size = new System.Drawing.Size(86, 13);
+            health_CategoryLabel.Size = new System.Drawing.Size(108, 16);
             health_CategoryLabel.TabIndex = 12;
             health_CategoryLabel.Text = "Health Category:";
             // 
             // vVPLabel
             // 
             vVPLabel.AutoSize = true;
-            vVPLabel.Location = new System.Drawing.Point(6, 279);
+            vVPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vVPLabel.Location = new System.Drawing.Point(6, 273);
             vVPLabel.Name = "vVPLabel";
-            vVPLabel.Size = new System.Drawing.Size(31, 13);
+            vVPLabel.Size = new System.Drawing.Size(38, 16);
             vVPLabel.TabIndex = 13;
             vVPLabel.Text = "VVP:";
             // 
@@ -106,11 +111,11 @@
             // 
             this.productsLabel.BackColor = System.Drawing.SystemColors.Highlight;
             this.productsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.productsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsLabel.ForeColor = System.Drawing.Color.White;
-            this.productsLabel.Location = new System.Drawing.Point(77, 20);
+            this.productsLabel.Location = new System.Drawing.Point(55, 23);
             this.productsLabel.Name = "productsLabel";
-            this.productsLabel.Size = new System.Drawing.Size(153, 27);
+            this.productsLabel.Size = new System.Drawing.Size(190, 30);
             this.productsLabel.TabIndex = 1;
             this.productsLabel.Text = "My Products";
             this.productsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,11 +126,11 @@
             this.addProductBtn.BackColor = System.Drawing.SystemColors.Highlight;
             this.addProductBtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.addProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addProductBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProductBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProductBtn.ForeColor = System.Drawing.Color.White;
-            this.addProductBtn.Location = new System.Drawing.Point(77, 334);
+            this.addProductBtn.Location = new System.Drawing.Point(55, 327);
             this.addProductBtn.Name = "addProductBtn";
-            this.addProductBtn.Size = new System.Drawing.Size(153, 31);
+            this.addProductBtn.Size = new System.Drawing.Size(190, 30);
             this.addProductBtn.TabIndex = 2;
             this.addProductBtn.Text = "Add New Product";
             this.addProductBtn.UseVisualStyleBackColor = false;
@@ -149,18 +154,19 @@
             this.productInfoBox.Controls.Add(this.quantityLabel);
             this.productInfoBox.Controls.Add(this.productPicture);
             this.productInfoBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productInfoBox.Location = new System.Drawing.Point(292, 23);
+            this.productInfoBox.Location = new System.Drawing.Point(309, 46);
             this.productInfoBox.Name = "productInfoBox";
-            this.productInfoBox.Size = new System.Drawing.Size(218, 309);
+            this.productInfoBox.Size = new System.Drawing.Size(250, 292);
             this.productInfoBox.TabIndex = 3;
             this.productInfoBox.TabStop = false;
             // 
             // vVPLabel1
             // 
             this.vVPLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource1, "VVP", true));
-            this.vVPLabel1.Location = new System.Drawing.Point(140, 279);
+            this.vVPLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vVPLabel1.Location = new System.Drawing.Point(163, 271);
             this.vVPLabel1.Name = "vVPLabel1";
-            this.vVPLabel1.Size = new System.Drawing.Size(100, 13);
+            this.vVPLabel1.Size = new System.Drawing.Size(81, 18);
             this.vVPLabel1.TabIndex = 14;
             // 
             // productsBindingSource1
@@ -176,72 +182,77 @@
             // health_CategoryLabel2
             // 
             this.health_CategoryLabel2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource1, "Health Category", true));
-            this.health_CategoryLabel2.Location = new System.Drawing.Point(140, 255);
+            this.health_CategoryLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.health_CategoryLabel2.Location = new System.Drawing.Point(163, 248);
             this.health_CategoryLabel2.Name = "health_CategoryLabel2";
-            this.health_CategoryLabel2.Size = new System.Drawing.Size(100, 13);
+            this.health_CategoryLabel2.Size = new System.Drawing.Size(81, 18);
             this.health_CategoryLabel2.TabIndex = 13;
             // 
             // retail_Price_With_TaxLabel1
             // 
             this.retail_Price_With_TaxLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource1, "Retail Price With Tax", true));
-            this.retail_Price_With_TaxLabel1.Location = new System.Drawing.Point(140, 226);
+            this.retail_Price_With_TaxLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retail_Price_With_TaxLabel1.Location = new System.Drawing.Point(163, 223);
             this.retail_Price_With_TaxLabel1.Name = "retail_Price_With_TaxLabel1";
-            this.retail_Price_With_TaxLabel1.Size = new System.Drawing.Size(100, 17);
+            this.retail_Price_With_TaxLabel1.Size = new System.Drawing.Size(81, 18);
             this.retail_Price_With_TaxLabel1.TabIndex = 12;
             // 
             // preferential_Price_With_TaxesLabel1
             // 
             this.preferential_Price_With_TaxesLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource1, "Preferential Price With Taxes", true));
-            this.preferential_Price_With_TaxesLabel1.Location = new System.Drawing.Point(140, 202);
+            this.preferential_Price_With_TaxesLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.preferential_Price_With_TaxesLabel1.Location = new System.Drawing.Point(163, 198);
             this.preferential_Price_With_TaxesLabel1.Name = "preferential_Price_With_TaxesLabel1";
-            this.preferential_Price_With_TaxesLabel1.Size = new System.Drawing.Size(100, 18);
+            this.preferential_Price_With_TaxesLabel1.Size = new System.Drawing.Size(81, 18);
             this.preferential_Price_With_TaxesLabel1.TabIndex = 11;
             // 
             // restockDateTimePicker
             // 
             this.restockDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource1, "restock", true));
+            this.restockDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restockDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.restockDateTimePicker.Location = new System.Drawing.Point(99, 154);
+            this.restockDateTimePicker.Location = new System.Drawing.Point(117, 147);
             this.restockDateTimePicker.Name = "restockDateTimePicker";
-            this.restockDateTimePicker.Size = new System.Drawing.Size(95, 20);
+            this.restockDateTimePicker.Size = new System.Drawing.Size(95, 22);
             this.restockDateTimePicker.TabIndex = 10;
             // 
             // quantityNumericUpDown
             // 
             this.quantityNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource1, "Quantity", true));
-            this.quantityNumericUpDown.Location = new System.Drawing.Point(159, 128);
+            this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityNumericUpDown.Location = new System.Drawing.Point(143, 121);
             this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(35, 20);
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(35, 22);
             this.quantityNumericUpDown.TabIndex = 9;
             this.quantityNumericUpDown.ValueChanged += new System.EventHandler(this.quantityNumericUpDown_ValueChanged);
             // 
             // notesLabel
             // 
             this.notesLabel.AutoSize = true;
-            this.notesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notesLabel.Location = new System.Drawing.Point(76, 184);
+            this.notesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notesLabel.Location = new System.Drawing.Point(65, 180);
             this.notesLabel.Name = "notesLabel";
-            this.notesLabel.Size = new System.Drawing.Size(40, 13);
+            this.notesLabel.Size = new System.Drawing.Size(49, 16);
             this.notesLabel.TabIndex = 5;
             this.notesLabel.Text = "Notes";
             // 
             // restockLabel
             // 
             this.restockLabel.AutoSize = true;
-            this.restockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restockLabel.Location = new System.Drawing.Point(6, 154);
+            this.restockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restockLabel.Location = new System.Drawing.Point(6, 152);
             this.restockLabel.Name = "restockLabel";
-            this.restockLabel.Size = new System.Drawing.Size(75, 13);
+            this.restockLabel.Size = new System.Drawing.Size(90, 16);
             this.restockLabel.TabIndex = 3;
             this.restockLabel.Text = "Restocking:";
             // 
             // quantityLabel
             // 
             this.quantityLabel.AutoSize = true;
-            this.quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLabel.Location = new System.Drawing.Point(6, 130);
+            this.quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityLabel.Location = new System.Drawing.Point(6, 123);
             this.quantityLabel.Name = "quantityLabel";
-            this.quantityLabel.Size = new System.Drawing.Size(110, 13);
+            this.quantityLabel.Size = new System.Drawing.Size(127, 16);
             this.quantityLabel.TabIndex = 1;
             this.quantityLabel.Text = "Quantity In Stock:";
             // 
@@ -251,7 +262,7 @@
             this.productPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.productPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productPicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("productPicture.InitialImage")));
-            this.productPicture.Location = new System.Drawing.Point(49, 19);
+            this.productPicture.Location = new System.Drawing.Point(54, 11);
             this.productPicture.Name = "productPicture";
             this.productPicture.Size = new System.Drawing.Size(124, 103);
             this.productPicture.TabIndex = 0;
@@ -266,10 +277,12 @@
             // 
             this.productsListBox.DataSource = this.productsBindingSource1;
             this.productsListBox.DisplayMember = "Product Name";
+            this.productsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productsListBox.FormattingEnabled = true;
-            this.productsListBox.Location = new System.Drawing.Point(77, 51);
+            this.productsListBox.ItemHeight = 16;
+            this.productsListBox.Location = new System.Drawing.Point(55, 51);
             this.productsListBox.Name = "productsListBox";
-            this.productsListBox.Size = new System.Drawing.Size(153, 277);
+            this.productsListBox.Size = new System.Drawing.Size(190, 276);
             this.productsListBox.TabIndex = 4;
             // 
             // productsTableAdapter
@@ -292,9 +305,9 @@
             this.removeBtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.removeBtn.Cursor = System.Windows.Forms.Cursors.Default;
             this.removeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.removeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Location = new System.Drawing.Point(341, 338);
+            this.removeBtn.Location = new System.Drawing.Point(352, 338);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.Size = new System.Drawing.Size(153, 31);
             this.removeBtn.TabIndex = 5;
@@ -302,10 +315,26 @@
             this.removeBtn.UseVisualStyleBackColor = false;
             this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
+            // productDetailsLabel
+            // 
+            this.productDetailsLabel.AutoSize = true;
+            this.productDetailsLabel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.productDetailsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productDetailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productDetailsLabel.ForeColor = System.Drawing.Color.White;
+            this.productDetailsLabel.Location = new System.Drawing.Point(309, 23);
+            this.productDetailsLabel.MinimumSize = new System.Drawing.Size(250, 30);
+            this.productDetailsLabel.Name = "productDetailsLabel";
+            this.productDetailsLabel.Size = new System.Drawing.Size(250, 30);
+            this.productDetailsLabel.TabIndex = 6;
+            this.productDetailsLabel.Text = "Product Details";
+            this.productDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // InventoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.productDetailsLabel);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.productsListBox);
             this.Controls.Add(this.productInfoBox);
@@ -322,6 +351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -346,5 +376,6 @@
         private System.Windows.Forms.Label preferential_Price_With_TaxesLabel1;
         private System.Windows.Forms.Label health_CategoryLabel2;
         private System.Windows.Forms.Label vVPLabel1;
+        private System.Windows.Forms.Label productDetailsLabel;
     }
 }

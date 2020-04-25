@@ -114,11 +114,11 @@
     <Compile Include="mainPageUserControl.Designer.cs">
       <DependentUpon>mainPageUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderPage.cs">
+    <Compile Include="OrderUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OrderPage.Designer.cs">
-      <DependentUpon>OrderPage.cs</DependentUpon>
+    <Compile Include="OrderUserControl.Designer.cs">
+      <DependentUpon>OrderUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductAddForm.cs">
       <SubType>Form</SubType>
@@ -163,8 +163,8 @@
     <EmbeddedResource Include="mainPageUserControl.resx">
       <DependentUpon>mainPageUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderPage.resx">
-      <DependentUpon>OrderPage.cs</DependentUpon>
+    <EmbeddedResource Include="OrderUserControl.resx">
+      <DependentUpon>OrderUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductAddForm.resx">
       <DependentUpon>ProductAddForm.cs</DependentUpon>

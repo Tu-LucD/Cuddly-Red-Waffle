@@ -21,5 +21,10 @@ namespace Cuddly_Red_Waffle_app
         {
             this.Close();
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

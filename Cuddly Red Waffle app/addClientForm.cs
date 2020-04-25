@@ -39,6 +39,8 @@ namespace Cuddly_Red_Waffle_app
             this.Validate();
             this.clientBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+
+            this.Close();
         }
 
         private void clientBindingNavigatorSaveItem_Click(object sender, EventArgs e)

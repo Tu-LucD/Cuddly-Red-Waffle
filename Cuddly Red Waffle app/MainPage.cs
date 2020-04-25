@@ -60,7 +60,7 @@ namespace Cuddly_Red_Waffle_app
         private void ordersLabel_Click(object sender, EventArgs e)
         {
             controlGroupBox.Controls.Clear();
-            controlGroupBox.Controls.Add(new OrderPage());
+            controlGroupBox.Controls.Add(new OrderUserControl());
         }
 
         private void usanaPictureBox_Click(object sender, EventArgs e)

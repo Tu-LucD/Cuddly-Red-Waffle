@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Cuddly_Red_Waffle_app
 {
-    public partial class OrderPage : UserControl
+    public partial class OrderUserControl : UserControl
     {
-        public OrderPage()
+        public OrderUserControl()
         {
             InitializeComponent();
         }

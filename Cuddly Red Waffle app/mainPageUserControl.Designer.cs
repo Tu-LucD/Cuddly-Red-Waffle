@@ -39,11 +39,11 @@
             this.addClientButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.addClientButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.addClientButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addClientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addClientButton.Location = new System.Drawing.Point(89, 115);
+            this.addClientButton.Location = new System.Drawing.Point(55, 115);
             this.addClientButton.Name = "addClientButton";
-            this.addClientButton.Size = new System.Drawing.Size(180, 30);
+            this.addClientButton.Size = new System.Drawing.Size(190, 30);
             this.addClientButton.TabIndex = 0;
             this.addClientButton.Text = "Add Client";
             this.addClientButton.UseVisualStyleBackColor = false;
@@ -54,11 +54,11 @@
             this.addRequestButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.addRequestButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.addRequestButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addRequestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addRequestButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addRequestButton.Location = new System.Drawing.Point(89, 164);
+            this.addRequestButton.Location = new System.Drawing.Point(55, 163);
             this.addRequestButton.Name = "addRequestButton";
-            this.addRequestButton.Size = new System.Drawing.Size(180, 30);
+            this.addRequestButton.Size = new System.Drawing.Size(190, 30);
             this.addRequestButton.TabIndex = 1;
             this.addRequestButton.Text = "Add Request";
             this.addRequestButton.UseVisualStyleBackColor = false;
@@ -69,11 +69,11 @@
             this.addOrderButton.BackColor = System.Drawing.SystemColors.Highlight;
             this.addOrderButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.addOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.addOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrderButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addOrderButton.Location = new System.Drawing.Point(89, 211);
+            this.addOrderButton.Location = new System.Drawing.Point(55, 212);
             this.addOrderButton.Name = "addOrderButton";
-            this.addOrderButton.Size = new System.Drawing.Size(180, 30);
+            this.addOrderButton.Size = new System.Drawing.Size(190, 30);
             this.addOrderButton.TabIndex = 2;
             this.addOrderButton.Text = "Add Order";
             this.addOrderButton.UseVisualStyleBackColor = false;
@@ -81,10 +81,12 @@
             // 
             // dailyListBox
             // 
+            this.dailyListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dailyListBox.FormattingEnabled = true;
-            this.dailyListBox.Location = new System.Drawing.Point(344, 57);
+            this.dailyListBox.ItemHeight = 16;
+            this.dailyListBox.Location = new System.Drawing.Point(310, 35);
             this.dailyListBox.Name = "dailyListBox";
-            this.dailyListBox.Size = new System.Drawing.Size(194, 290);
+            this.dailyListBox.Size = new System.Drawing.Size(240, 292);
             this.dailyListBox.TabIndex = 3;
             // 
             // mainPageUserControl
