@@ -341,7 +341,7 @@
             this.Controls.Add(this.addProductBtn);
             this.Controls.Add(this.productsLabel);
             this.Name = "InventoryControl";
-            this.Size = new System.Drawing.Size(602, 391);
+            this.Size = new System.Drawing.Size(602, 382);
             this.Load += new System.EventHandler(this.InventoryControl_Load);
             this.productInfoBox.ResumeLayout(false);
             this.productInfoBox.PerformLayout();

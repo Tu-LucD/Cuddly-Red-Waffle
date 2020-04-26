@@ -27,5 +27,20 @@ namespace Cuddly_Red_Waffle_app
             addClientForm add = new addClientForm();
             add.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                clientTableAdapter.SearchByName(this.uSANA_DBDataSet.Client,
+                clientSearch.Text, clientSearch.Text);
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show("Unable to retrieve name from DB. Please input a valid name", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }

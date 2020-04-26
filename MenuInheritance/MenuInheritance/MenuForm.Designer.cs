@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.searchLabel = new System.Windows.Forms.Label();
             this.pagesPanel = new System.Windows.Forms.Panel();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.clientLabel = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.settingsPictureBox = new System.Windows.Forms.PictureBox();
             this.usanaPictureBox = new System.Windows.Forms.PictureBox();
             this.controlGroupBox = new System.Windows.Forms.GroupBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.menuPanel.SuspendLayout();
             this.pagesPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
@@ -52,26 +52,12 @@
             // menuPanel
             // 
             this.menuPanel.BackColor = System.Drawing.Color.Gray;
-            this.menuPanel.Controls.Add(this.searchLabel);
+            this.menuPanel.Controls.Add(this.searchBox);
             this.menuPanel.Controls.Add(this.pagesPanel);
             this.menuPanel.Location = new System.Drawing.Point(0, 40);
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(180, 402);
             this.menuPanel.TabIndex = 1;
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.BackColor = System.Drawing.Color.White;
-            this.searchLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLabel.Location = new System.Drawing.Point(30, 20);
-            this.searchLabel.MinimumSize = new System.Drawing.Size(120, 20);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(120, 20);
-            this.searchLabel.TabIndex = 0;
-            this.searchLabel.Text = "Search";
-            this.searchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pagesPanel
             // 
@@ -82,9 +68,9 @@
             this.pagesPanel.Controls.Add(this.requestLabel);
             this.pagesPanel.Controls.Add(this.inventoryLabel);
             this.pagesPanel.Controls.Add(this.usanaLabel);
-            this.pagesPanel.Location = new System.Drawing.Point(30, 40);
+            this.pagesPanel.Location = new System.Drawing.Point(20, 60);
             this.pagesPanel.Name = "pagesPanel";
-            this.pagesPanel.Size = new System.Drawing.Size(120, 340);
+            this.pagesPanel.Size = new System.Drawing.Size(120, 294);
             this.pagesPanel.TabIndex = 3;
             // 
             // aboutLabel
@@ -210,6 +196,17 @@
             this.controlGroupBox.TabIndex = 3;
             this.controlGroupBox.TabStop = false;
             // 
+            // searchBox
+            // 
+            this.searchBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Search"});
+            this.searchBox.Location = new System.Drawing.Point(20, 34);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(120, 20);
+            this.searchBox.TabIndex = 4;
+            this.searchBox.Text = "Search";
+            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchOnEnter);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,7 +234,6 @@
 
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Panel headerPanel;
-        private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.PictureBox settingsPictureBox;
         private System.Windows.Forms.Panel pagesPanel;
         public System.Windows.Forms.Label archiveLabel;
@@ -249,6 +245,7 @@
         public System.Windows.Forms.Label aboutLabel;
         public System.Windows.Forms.GroupBox controlGroupBox;
         public System.Windows.Forms.PictureBox usanaPictureBox;
+        public System.Windows.Forms.TextBox searchBox;
     }
 }
 

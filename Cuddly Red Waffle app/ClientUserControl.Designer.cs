@@ -55,6 +55,8 @@
             this.addClientButton = new System.Windows.Forms.Button();
             this.myClientsLabel = new System.Windows.Forms.Label();
             this.clientDetailsLabel = new System.Windows.Forms.Label();
+            this.clientSearch = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.PersonalInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
@@ -262,7 +264,7 @@
             this.addClientButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.addClientButton.Location = new System.Drawing.Point(55, 329);
             this.addClientButton.Name = "addClientButton";
-            this.addClientButton.Size = new System.Drawing.Size(190, 30);
+            this.addClientButton.Size = new System.Drawing.Size(190, 28);
             this.addClientButton.TabIndex = 12;
             this.addClientButton.Text = "Add Client";
             this.addClientButton.UseVisualStyleBackColor = false;
@@ -298,11 +300,37 @@
             this.clientDetailsLabel.Text = "Client Details";
             this.clientDetailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // clientSearch
+            // 
+            this.clientSearch.Location = new System.Drawing.Point(310, 329);
+            this.clientSearch.Multiline = true;
+            this.clientSearch.Name = "clientSearch";
+            this.clientSearch.Size = new System.Drawing.Size(144, 20);
+            this.clientSearch.TabIndex = 16;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(460, 329);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 20);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Search a Client";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ClientUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.clientSearch);
             this.Controls.Add(this.clientDetailsLabel);
             this.Controls.Add(this.myClientsLabel);
             this.Controls.Add(this.clientListBox);
@@ -353,5 +381,7 @@
         private System.Windows.Forms.Label healthIDLabel;
         private System.Windows.Forms.Label myClientsLabel;
         private System.Windows.Forms.Label clientDetailsLabel;
+        private System.Windows.Forms.TextBox clientSearch;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -20,21 +20,30 @@ namespace Cuddly_Red_Waffle_app
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            string name = productNameText.Text;
-            int healthCategory = int.Parse(healthText.Text);
-            double retailPrice = double.Parse(retailText.Text);
-            double prefPrice = double.Parse(prefPriceText.Text);
-            int vvp = int.Parse(vvpText.Text);
+            try
+            {
+                string name = productNameText.Text;
+                int healthCategory = int.Parse(healthText.Text);
+                double retailPrice = double.Parse(retailText.Text);
+                double prefPrice = double.Parse(prefPriceText.Text);
+                int vvp = int.Parse(vvpText.Text);
 
-            Product newProduct = new Product(name, healthCategory, retailPrice, prefPrice, vvp);
+                Product newProduct = new Product(name, healthCategory, retailPrice, prefPrice, vvp);
 
-            newProduct.CreateProductRow();
+                newProduct.CreateProductRow();
 
-            this.Validate();
-            this.productsBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+                this.Validate();
+                this.productsBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
 
-            this.Close();
+                this.Close();
+            }
+            catch(SystemException ex)
+            {
+                MessageBox.Show("Please make sure to input valid values. Not empty values accepted", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 

@@ -69,6 +69,12 @@
             // 
             this.usanaPictureBox.Click += new System.EventHandler(this.usanaPictureBox_Click);
             // 
+            // searchBox
+            // 
+            this.searchBox.Text = "Search a section";
+            this.searchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchSection_KeyDown);
+            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchSection);
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

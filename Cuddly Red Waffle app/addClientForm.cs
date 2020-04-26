@@ -25,22 +25,32 @@ namespace Cuddly_Red_Waffle_app
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            string firstName = firstNametextBox.Text;
-            string lastName = lastNameTextBox.Text;
-            string phoneNumber = phoneNumberTextBox.Text;
-            string email = emailTextBox.Text;
-            string address = addressTextBox.Text;
-            int category = int.Parse(categoryTextBox.Text);
+            try
+            {
 
-            Client newClient = new Client(firstName, lastName, email, address, phoneNumber, category);
 
-            newClient.CreateClientRow();
+                string firstName = firstNametextBox.Text;
+                string lastName = lastNameTextBox.Text;
+                string phoneNumber = phoneNumberTextBox.Text;
+                string email = emailTextBox.Text;
+                string address = addressTextBox.Text;
+                int category = int.Parse(categoryTextBox.Text);
 
-            this.Validate();
-            this.clientBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+                Client newClient = new Client(firstName, lastName, email, address, phoneNumber, category);
 
-            this.Close();
+                newClient.CreateClientRow();
+
+                this.Validate();
+                this.clientBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+
+                this.Close();
+            }
+            catch(SystemException ex)
+            {
+                MessageBox.Show("Please make sure to input valid values. Not empty values accepted", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void clientBindingNavigatorSaveItem_Click(object sender, EventArgs e)

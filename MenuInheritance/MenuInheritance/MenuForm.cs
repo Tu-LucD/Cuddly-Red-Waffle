@@ -96,5 +96,10 @@ namespace MenuInheritance
             }
 
         }
+
+        private void searchOnEnter(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

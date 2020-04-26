@@ -31,7 +31,14 @@
             this.addClientButton = new System.Windows.Forms.Button();
             this.addRequestButton = new System.Windows.Forms.Button();
             this.addOrderButton = new System.Windows.Forms.Button();
-            this.dailyListBox = new System.Windows.Forms.ListBox();
+            this.oldestTab = new System.Windows.Forms.TabPage();
+            this.oldestRequests = new System.Windows.Forms.ListBox();
+            this.newestPage = new System.Windows.Forms.TabPage();
+            this.newestRequests = new System.Windows.Forms.ListBox();
+            this.requestTabControl = new System.Windows.Forms.TabControl();
+            this.oldestTab.SuspendLayout();
+            this.newestPage.SuspendLayout();
+            this.requestTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // addClientButton
@@ -79,26 +86,74 @@
             this.addOrderButton.UseVisualStyleBackColor = false;
             this.addOrderButton.Click += new System.EventHandler(this.addOrderButton_Click);
             // 
-            // dailyListBox
+            // oldestTab
             // 
-            this.dailyListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dailyListBox.FormattingEnabled = true;
-            this.dailyListBox.ItemHeight = 16;
-            this.dailyListBox.Location = new System.Drawing.Point(310, 35);
-            this.dailyListBox.Name = "dailyListBox";
-            this.dailyListBox.Size = new System.Drawing.Size(240, 292);
-            this.dailyListBox.TabIndex = 3;
+            this.oldestTab.BackColor = System.Drawing.SystemColors.Highlight;
+            this.oldestTab.Controls.Add(this.oldestRequests);
+            this.oldestTab.Location = new System.Drawing.Point(4, 22);
+            this.oldestTab.Name = "oldestTab";
+            this.oldestTab.Padding = new System.Windows.Forms.Padding(3);
+            this.oldestTab.Size = new System.Drawing.Size(231, 305);
+            this.oldestTab.TabIndex = 1;
+            this.oldestTab.Text = "Oldest Requests";
+            // 
+            // oldestRequests
+            // 
+            this.oldestRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.oldestRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oldestRequests.FormattingEnabled = true;
+            this.oldestRequests.ItemHeight = 16;
+            this.oldestRequests.Location = new System.Drawing.Point(0, 8);
+            this.oldestRequests.Name = "oldestRequests";
+            this.oldestRequests.Size = new System.Drawing.Size(231, 288);
+            this.oldestRequests.TabIndex = 4;
+            // 
+            // newestPage
+            // 
+            this.newestPage.BackColor = System.Drawing.SystemColors.Highlight;
+            this.newestPage.Controls.Add(this.newestRequests);
+            this.newestPage.Location = new System.Drawing.Point(4, 22);
+            this.newestPage.Name = "newestPage";
+            this.newestPage.Padding = new System.Windows.Forms.Padding(3);
+            this.newestPage.Size = new System.Drawing.Size(231, 305);
+            this.newestPage.TabIndex = 0;
+            this.newestPage.Text = "Newest Requests";
+            // 
+            // newestRequests
+            // 
+            this.newestRequests.BackColor = System.Drawing.SystemColors.Window;
+            this.newestRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newestRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newestRequests.FormattingEnabled = true;
+            this.newestRequests.ItemHeight = 16;
+            this.newestRequests.Location = new System.Drawing.Point(0, 7);
+            this.newestRequests.Name = "newestRequests";
+            this.newestRequests.Size = new System.Drawing.Size(231, 288);
+            this.newestRequests.TabIndex = 3;
+            // 
+            // requestTabControl
+            // 
+            this.requestTabControl.Controls.Add(this.newestPage);
+            this.requestTabControl.Controls.Add(this.oldestTab);
+            this.requestTabControl.Location = new System.Drawing.Point(301, 26);
+            this.requestTabControl.Name = "requestTabControl";
+            this.requestTabControl.SelectedIndex = 0;
+            this.requestTabControl.Size = new System.Drawing.Size(239, 331);
+            this.requestTabControl.TabIndex = 4;
             // 
             // mainPageUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dailyListBox);
+            this.Controls.Add(this.requestTabControl);
             this.Controls.Add(this.addOrderButton);
             this.Controls.Add(this.addRequestButton);
             this.Controls.Add(this.addClientButton);
             this.Name = "mainPageUserControl";
             this.Size = new System.Drawing.Size(602, 391);
+            this.oldestTab.ResumeLayout(false);
+            this.newestPage.ResumeLayout(false);
+            this.requestTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -108,6 +163,10 @@
         private System.Windows.Forms.Button addClientButton;
         private System.Windows.Forms.Button addRequestButton;
         private System.Windows.Forms.Button addOrderButton;
-        private System.Windows.Forms.ListBox dailyListBox;
+        private System.Windows.Forms.TabPage oldestTab;
+        private System.Windows.Forms.ListBox oldestRequests;
+        private System.Windows.Forms.TabPage newestPage;
+        private System.Windows.Forms.ListBox newestRequests;
+        private System.Windows.Forms.TabControl requestTabControl;
     }
 }
