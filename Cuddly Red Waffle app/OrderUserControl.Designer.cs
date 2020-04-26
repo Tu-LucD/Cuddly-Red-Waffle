@@ -30,12 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.orderListBox = new System.Windows.Forms.ListBox();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
             this.addOrderButton = new System.Windows.Forms.Button();
             this.myOrdersLabel = new System.Windows.Forms.Label();
             this.orderDetailsLabel = new System.Windows.Forms.Label();
             this.orderInfoTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.orderProductList = new System.Windows.Forms.ListBox();
+            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.totalPointsLabel = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.estimatedDeliveryDate = new System.Windows.Forms.Label();
@@ -46,16 +49,13 @@
             this.orderSentDate = new System.Windows.Forms.Label();
             this.orderPlacedDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordersTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.OrdersTableAdapter();
-            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
             this.orderInfoTab.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // orderListBox
@@ -74,6 +74,16 @@
             this.orderListBox.ValueMember = "OrderID";
             this.orderListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // ordersBindingSource
+            // 
+            this.ordersBindingSource.DataMember = "Orders";
+            this.ordersBindingSource.DataSource = this.uSANA_DBDataSet;
+            // 
+            // uSANA_DBDataSet
+            // 
+            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
+            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // addOrderButton
             // 
             this.addOrderButton.BackColor = System.Drawing.SystemColors.Highlight;
@@ -81,7 +91,7 @@
             this.addOrderButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addOrderButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.addOrderButton.Location = new System.Drawing.Point(55, 329);
+            this.addOrderButton.Location = new System.Drawing.Point(55, 310);
             this.addOrderButton.Name = "addOrderButton";
             this.addOrderButton.Size = new System.Drawing.Size(190, 30);
             this.addOrderButton.TabIndex = 1;
@@ -160,6 +170,11 @@
             this.orderProductList.TabIndex = 0;
             this.orderProductList.ValueMember = "Product In order";
             // 
+            // ordersBindingSource1
+            // 
+            this.ordersBindingSource1.DataMember = "Orders";
+            this.ordersBindingSource1.DataSource = this.uSANA_DBDataSet;
+            // 
             // totalPointsLabel
             // 
             this.totalPointsLabel.AutoSize = true;
@@ -168,7 +183,7 @@
             this.totalPointsLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.totalPointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalPointsLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.totalPointsLabel.Location = new System.Drawing.Point(-4, 249);
+            this.totalPointsLabel.Location = new System.Drawing.Point(-5, 239);
             this.totalPointsLabel.MinimumSize = new System.Drawing.Size(240, 30);
             this.totalPointsLabel.Name = "totalPointsLabel";
             this.totalPointsLabel.Size = new System.Drawing.Size(240, 30);
@@ -202,7 +217,7 @@
             this.estimatedDeliveryDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.estimatedDeliveryDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estimatedDeliveryDate.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.estimatedDeliveryDate.Location = new System.Drawing.Point(-4, 255);
+            this.estimatedDeliveryDate.Location = new System.Drawing.Point(-4, 246);
             this.estimatedDeliveryDate.MinimumSize = new System.Drawing.Size(240, 20);
             this.estimatedDeliveryDate.Name = "estimatedDeliveryDate";
             this.estimatedDeliveryDate.Size = new System.Drawing.Size(240, 20);
@@ -217,7 +232,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label10.Location = new System.Drawing.Point(-3, 235);
+            this.label10.Location = new System.Drawing.Point(-3, 226);
             this.label10.MinimumSize = new System.Drawing.Size(240, 20);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(240, 20);
@@ -289,24 +304,9 @@
             this.label3.Text = "Order Placed";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // uSANA_DBDataSet
-            // 
-            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
-            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersBindingSource
-            // 
-            this.ordersBindingSource.DataMember = "Orders";
-            this.ordersBindingSource.DataSource = this.uSANA_DBDataSet;
-            // 
             // ordersTableAdapter
             // 
             this.ordersTableAdapter.ClearBeforeFill = true;
-            // 
-            // ordersBindingSource1
-            // 
-            this.ordersBindingSource1.DataMember = "Orders";
-            this.ordersBindingSource1.DataSource = this.uSANA_DBDataSet;
             // 
             // OrderUserControl
             // 
@@ -321,14 +321,14 @@
             this.Name = "OrderUserControl";
             this.Size = new System.Drawing.Size(602, 391);
             this.Load += new System.EventHandler(this.OrderPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
             this.orderInfoTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
