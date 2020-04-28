@@ -33,7 +33,7 @@ namespace Cuddly_Red_Waffle_app.AppClasses
 
         public void CreateRequestRow()
         {
-            RequestsTable.Insert(datePlaced,priority,isCompleted,isPayed,clientID,productsID,1);
+            RequestsTable.InsertIntoRequests(DatePlaced.ToString(), Priority, IsCompleted, IsPayed, ClientID, ProductsID);
 
             RequestsTable.Update(RequestsTable.GetData());
         }

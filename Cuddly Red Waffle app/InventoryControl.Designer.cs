@@ -37,8 +37,11 @@
             this.productsLabel = new System.Windows.Forms.Label();
             this.addProductBtn = new System.Windows.Forms.Button();
             this.productInfoBox = new System.Windows.Forms.GroupBox();
-            this.vVPLabel1 = new System.Windows.Forms.Label();
+            this.restockDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
+            this.quantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.vVPLabel1 = new System.Windows.Forms.Label();
             this.health_CategoryLabel2 = new System.Windows.Forms.Label();
             this.retail_Price_With_TaxLabel1 = new System.Windows.Forms.Label();
             this.preferential_Price_With_TaxesLabel1 = new System.Windows.Forms.Label();
@@ -46,24 +49,21 @@
             this.restockLabel = new System.Windows.Forms.Label();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.productPicture = new System.Windows.Forms.PictureBox();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsListBox = new System.Windows.Forms.ListBox();
             this.productsTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.ProductsTableAdapter();
             this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
             this.removeBtn = new System.Windows.Forms.Button();
             this.productDetailsLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.quantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.restockDateTimePicker = new System.Windows.Forms.DateTimePicker();
             preferential_Price_With_TaxesLabel = new System.Windows.Forms.Label();
             retail_Price_With_TaxLabel = new System.Windows.Forms.Label();
             health_CategoryLabel = new System.Windows.Forms.Label();
             vVPLabel = new System.Windows.Forms.Label();
             this.productInfoBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // preferential_Price_With_TaxesLabel
@@ -159,6 +159,33 @@
             this.productInfoBox.TabIndex = 3;
             this.productInfoBox.TabStop = false;
             // 
+            // restockDateTimePicker
+            // 
+            this.restockDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "restock", true));
+            this.restockDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.restockDateTimePicker.Location = new System.Drawing.Point(142, 130);
+            this.restockDateTimePicker.Name = "restockDateTimePicker";
+            this.restockDateTimePicker.Size = new System.Drawing.Size(96, 20);
+            this.restockDateTimePicker.TabIndex = 16;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.uSANA_DBDataSet;
+            // 
+            // uSANA_DBDataSet
+            // 
+            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
+            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // quantityNumericUpDown
+            // 
+            this.quantityNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "Quantity", true));
+            this.quantityNumericUpDown.Location = new System.Drawing.Point(142, 102);
+            this.quantityNumericUpDown.Name = "quantityNumericUpDown";
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(38, 20);
+            this.quantityNumericUpDown.TabIndex = 15;
+            // 
             // vVPLabel1
             // 
             this.vVPLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "VVP", true));
@@ -167,11 +194,6 @@
             this.vVPLabel1.Name = "vVPLabel1";
             this.vVPLabel1.Size = new System.Drawing.Size(81, 18);
             this.vVPLabel1.TabIndex = 14;
-            // 
-            // uSANA_DBDataSet
-            // 
-            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
-            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // health_CategoryLabel2
             // 
@@ -241,11 +263,6 @@
             this.productPicture.Size = new System.Drawing.Size(124, 85);
             this.productPicture.TabIndex = 0;
             this.productPicture.TabStop = false;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.uSANA_DBDataSet;
             // 
             // productsListBox
             // 
@@ -319,23 +336,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // quantityNumericUpDown
-            // 
-            this.quantityNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "Quantity", true));
-            this.quantityNumericUpDown.Location = new System.Drawing.Point(142, 102);
-            this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(38, 20);
-            this.quantityNumericUpDown.TabIndex = 15;
-            // 
-            // restockDateTimePicker
-            // 
-            this.restockDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.productsBindingSource, "restock", true));
-            this.restockDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.restockDateTimePicker.Location = new System.Drawing.Point(142, 130);
-            this.restockDateTimePicker.Name = "restockDateTimePicker";
-            this.restockDateTimePicker.Size = new System.Drawing.Size(96, 20);
-            this.restockDateTimePicker.TabIndex = 16;
-            // 
             // InventoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,14 +348,14 @@
             this.Controls.Add(this.addProductBtn);
             this.Controls.Add(this.productsLabel);
             this.Name = "InventoryControl";
-            this.Size = new System.Drawing.Size(724, 382);
+            this.Size = new System.Drawing.Size(602, 391);
             this.Load += new System.EventHandler(this.InventoryControl_Load);
             this.productInfoBox.ResumeLayout(false);
             this.productInfoBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
