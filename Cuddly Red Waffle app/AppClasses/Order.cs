@@ -19,10 +19,10 @@ namespace Cuddly_Red_Waffle_app.AppClasses
         public USANA_DBDataSetTableAdapters.OrdersTableAdapter OrdersTable =
             new USANA_DBDataSetTableAdapters.OrdersTableAdapter();
 
-        public Order(int orderID, int productInOrder, int totalPoints, 
+        public Order(/*int orderID,*/ int productInOrder, int totalPoints, 
             bool isPlaced, bool isShipped, bool isDelivered, DateTime arrivalDate)
         {
-            OrderID = orderID;
+            //OrderID = orderID;
             ProductInOrder = productInOrder;
             TotalPoints = totalPoints;
             IsPlaced = isPlaced;

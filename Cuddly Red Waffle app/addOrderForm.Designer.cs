@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.headerLabel = new System.Windows.Forms.Label();
             this.productsListBox = new System.Windows.Forms.ListBox();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usanA_DBDataSet1 = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
             this.productsLabel = new System.Windows.Forms.Label();
             this.totalPointsLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
@@ -41,9 +43,10 @@
             this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.arrivalDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ordersTableAdapter1 = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.OrdersTableAdapter();
-            this.usanA_DBDataSet1 = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
             this.tableAdapterManager1 = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.ProductsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usanA_DBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,13 +68,26 @@
             // 
             // productsListBox
             // 
+            this.productsListBox.DataSource = this.productsBindingSource;
+            this.productsListBox.DisplayMember = "Product Name";
             this.productsListBox.FormattingEnabled = true;
             this.productsListBox.ItemHeight = 16;
             this.productsListBox.Location = new System.Drawing.Point(147, 46);
-            this.productsListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsListBox.Margin = new System.Windows.Forms.Padding(4);
             this.productsListBox.Name = "productsListBox";
             this.productsListBox.Size = new System.Drawing.Size(192, 84);
             this.productsListBox.TabIndex = 1;
+            this.productsListBox.ValueMember = "ProductId";
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.usanA_DBDataSet1;
+            // 
+            // usanA_DBDataSet1
+            // 
+            this.usanA_DBDataSet1.DataSetName = "USANA_DBDataSet";
+            this.usanA_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productsLabel
             // 
@@ -120,7 +136,7 @@
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.White;
             this.addButton.Location = new System.Drawing.Point(108, 247);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(100, 28);
             this.addButton.TabIndex = 6;
@@ -135,7 +151,7 @@
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelButton.ForeColor = System.Drawing.Color.White;
             this.cancelButton.Location = new System.Drawing.Point(231, 247);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(100, 28);
             this.cancelButton.TabIndex = 7;
@@ -146,7 +162,7 @@
             // totalPointsTextBox
             // 
             this.totalPointsTextBox.Location = new System.Drawing.Point(148, 144);
-            this.totalPointsTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.totalPointsTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.totalPointsTextBox.Name = "totalPointsTextBox";
             this.totalPointsTextBox.Size = new System.Drawing.Size(191, 22);
             this.totalPointsTextBox.TabIndex = 8;
@@ -157,10 +173,10 @@
             this.statusComboBox.Items.AddRange(new object[] {
             "Pending",
             "Ordered",
-            "Shipped ",
+            "Shipped",
             "Delivered"});
             this.statusComboBox.Location = new System.Drawing.Point(147, 175);
-            this.statusComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.statusComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.statusComboBox.Name = "statusComboBox";
             this.statusComboBox.Size = new System.Drawing.Size(192, 24);
             this.statusComboBox.TabIndex = 9;
@@ -168,7 +184,7 @@
             // arrivalDateTimePicker
             // 
             this.arrivalDateTimePicker.Location = new System.Drawing.Point(147, 208);
-            this.arrivalDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.arrivalDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.arrivalDateTimePicker.Name = "arrivalDateTimePicker";
             this.arrivalDateTimePicker.Size = new System.Drawing.Size(192, 22);
             this.arrivalDateTimePicker.TabIndex = 10;
@@ -176,11 +192,6 @@
             // ordersTableAdapter1
             // 
             this.ordersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // usanA_DBDataSet1
-            // 
-            this.usanA_DBDataSet1.DataSetName = "USANA_DBDataSet";
-            this.usanA_DBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableAdapterManager1
             // 
@@ -198,6 +209,10 @@
             this.orderBindingSource.DataSource = this.usanA_DBDataSet1;
             this.orderBindingSource.Position = 0;
             // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
             // addOrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -214,9 +229,11 @@
             this.Controls.Add(this.productsLabel);
             this.Controls.Add(this.productsListBox);
             this.Controls.Add(this.headerLabel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "addOrderForm";
             this.Text = "Add Order";
+            this.Load += new System.EventHandler(this.addOrderForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usanA_DBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -241,5 +258,7 @@
         private USANA_DBDataSet usanA_DBDataSet1;
         private USANA_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.BindingSource orderBindingSource;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private USANA_DBDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
     }
 }

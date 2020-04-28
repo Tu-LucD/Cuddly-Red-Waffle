@@ -25,50 +25,59 @@ namespace Cuddly_Red_Waffle_app
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            int productInOrder; // need to figure out how the user is supposed to input products in listbox
-            int totalPoints;
-            bool isPlaced;
-            bool isShipped;
-            bool isDelivered;
-            DateTime arrivalDate;
+                
+                int productInOrder; // need to figure out how the user is supposed to input products in listbox
+                int totalPoints;
+                bool isPlaced;
+                bool isShipped;
+                bool isDelivered;
+                DateTime arrivalDate;
 
-            totalPoints = int.Parse(totalPointsTextBox.Text);
-            arrivalDate = arrivalDateTimePicker.Value;
-            switch (statusComboBox.SelectedItem.ToString())
-            {
-                case "Placed":
-                    isPlaced = true;
-                    isShipped = false;
-                    isDelivered = false;
-                    break;
-                case "Shipped":
-                    isPlaced = true;
-                    isShipped = true;
-                    isDelivered = false;
-                    break;
-                case "Delivered":
-                    isPlaced = true;
-                    isShipped = true;
-                    isDelivered = true;
-                    break;
-                default:
-                    isPlaced = false;
-                    isShipped = false;
-                    isDelivered = false;
-                    break;
-            }
+                productInOrder = (int)productsListBox.SelectedValue;
+                totalPoints = int.Parse(totalPointsTextBox.Text);
+                arrivalDate = arrivalDateTimePicker.Value;
+                switch (statusComboBox.SelectedItem.ToString())
+                {
+                    case "Ordered":
+                        isPlaced = true;
+                        isShipped = false;
+                        isDelivered = false;
+                        break;
+                    case "Shipped":
+                        isPlaced = true;
+                        isShipped = true;
+                        isDelivered = false;
+                        break;
+                    case "Delivered":
+                        isPlaced = true;
+                        isShipped = true;
+                        isDelivered = true;
+                        break;
+                    default:
+                        isPlaced = false;
+                        isShipped = false;
+                        isDelivered = false;
+                        break;
+                }
 
-            Order newOrder = new Order(0, 0, totalPoints, isPlaced, isShipped, isDelivered, arrivalDate);
-            //                           ^ 
-            //                           | Got to figure out what to put there instead of zero
+                Order newOrder = new Order(productInOrder, totalPoints, isPlaced, isShipped, isDelivered, arrivalDate);
 
-            newOrder.CreateOrderRow();
+                newOrder.CreateOrderRow();
 
-            this.Validate();
-            this.orderBindingSource.EndEdit();
-            this.tableAdapterManager1.UpdateAll(this.usanA_DBDataSet1);
+                this.Validate();
+                this.orderBindingSource.EndEdit();
+                this.tableAdapterManager1.UpdateAll(this.usanA_DBDataSet1);
 
-            this.Close();
+                this.Close();
+            
+            
+        }
+
+        private void addOrderForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'usanA_DBDataSet1.Products' table. You can move, or remove it, as needed.
+            this.productsTableAdapter.Fill(this.usanA_DBDataSet1.Products);
+
         }
     }
 }
