@@ -25,20 +25,14 @@ namespace Cuddly_Red_Waffle_app
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            int clientNumber;
-            DateTime date;
-            int priority;
-            int products;
-            bool completed;
-            bool payed;
-            if(int.TryParse(clientNumberTextBox.Text,out clientNumber) && int.TryParse(productsTextBox.Text, out products)
-                && priorityComboBox.Text != "" && completionComboBox.Text != "" && paymentStatusComboBox.Text != "")
+            try
             {
-                
-
-                products = int.Parse(productsTextBox.Text);
-                clientNumber = int.Parse(clientNumberTextBox.Text);
-                date = dateTimePicker1.Value;
+                int clientNumber = int.Parse(clientNumberTextBox.Text);
+                DateTime date = dateTimePicker1.Value;
+                int priority;
+                int products = int.Parse(productsTextBox.Text);
+                bool completed;
+                bool payed;
 
                 switch (priorityComboBox.Text)
                 {
@@ -75,13 +69,33 @@ namespace Cuddly_Red_Waffle_app
 
                 Request request = new Request(clientNumber, 1, date, priority, completed, payed);
                 request.CreateRequestRow();
+
+                this.Validate();
+                this.requestBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+
                 this.Close();
             }
-
-            else
+            catch (SystemException ex)
             {
-                MessageBox.Show("An invalid input was detected or was missing. Please, try again", "Invalid or Missing input", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                MessageBox.Show("Please make sure to input valid values. Not empty values accepted", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }                       
+        }
+
+
+        private void addRequestForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'uSANA_DBDataSet.Request' table. You can move, or remove it, as needed.
+            this.requestTableAdapter.Fill(this.uSANA_DBDataSet.Request);            
+        }
+
+        private void requestBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.requestBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.uSANA_DBDataSet);
+
         }
     }
 }

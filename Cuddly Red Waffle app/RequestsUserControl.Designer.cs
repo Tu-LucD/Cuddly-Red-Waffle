@@ -33,10 +33,9 @@
             System.Windows.Forms.Label date_PlacedLabel;
             System.Windows.Forms.Label priorityLabel;
             System.Windows.Forms.Label completedLabel;
-            System.Windows.Forms.Label payedLabel;
             System.Windows.Forms.Label clientLabel;
             System.Windows.Forms.Label productsLabel;
-            System.Windows.Forms.Label paymentInfoLabel;
+            System.Windows.Forms.Label payedLabel;
             this.requestsListBox = new System.Windows.Forms.ListBox();
             this.requestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
@@ -45,27 +44,80 @@
             this.addRequestButton = new System.Windows.Forms.Button();
             this.requestTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.RequestTableAdapter();
             this.requestGroupBox = new System.Windows.Forms.GroupBox();
-            this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
             this.requestIDTextBox = new System.Windows.Forms.TextBox();
             this.date_PlacedDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.priorityTextBox = new System.Windows.Forms.TextBox();
             this.completedCheckBox = new System.Windows.Forms.CheckBox();
-            this.payedCheckBox = new System.Windows.Forms.CheckBox();
             this.clientTextBox = new System.Windows.Forms.TextBox();
             this.productsTextBox = new System.Windows.Forms.TextBox();
-            this.paymentInfoTextBox = new System.Windows.Forms.TextBox();
+            this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
+            this.label1 = new System.Windows.Forms.Label();
+            this.payedCheckBox = new System.Windows.Forms.CheckBox();
             requestIDLabel = new System.Windows.Forms.Label();
             date_PlacedLabel = new System.Windows.Forms.Label();
             priorityLabel = new System.Windows.Forms.Label();
             completedLabel = new System.Windows.Forms.Label();
-            payedLabel = new System.Windows.Forms.Label();
             clientLabel = new System.Windows.Forms.Label();
             productsLabel = new System.Windows.Forms.Label();
-            paymentInfoLabel = new System.Windows.Forms.Label();
+            payedLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.requestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
             this.requestGroupBox.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // requestIDLabel
+            // 
+            requestIDLabel.AutoSize = true;
+            requestIDLabel.Location = new System.Drawing.Point(20, 33);
+            requestIDLabel.Name = "requestIDLabel";
+            requestIDLabel.Size = new System.Drawing.Size(64, 13);
+            requestIDLabel.TabIndex = 0;
+            requestIDLabel.Text = "Request ID:";
+            // 
+            // date_PlacedLabel
+            // 
+            date_PlacedLabel.AutoSize = true;
+            date_PlacedLabel.Location = new System.Drawing.Point(20, 60);
+            date_PlacedLabel.Name = "date_PlacedLabel";
+            date_PlacedLabel.Size = new System.Drawing.Size(69, 13);
+            date_PlacedLabel.TabIndex = 2;
+            date_PlacedLabel.Text = "Date Placed:";
+            // 
+            // priorityLabel
+            // 
+            priorityLabel.AutoSize = true;
+            priorityLabel.Location = new System.Drawing.Point(20, 85);
+            priorityLabel.Name = "priorityLabel";
+            priorityLabel.Size = new System.Drawing.Size(41, 13);
+            priorityLabel.TabIndex = 4;
+            priorityLabel.Text = "Priority:";
+            // 
+            // completedLabel
+            // 
+            completedLabel.AutoSize = true;
+            completedLabel.Location = new System.Drawing.Point(20, 113);
+            completedLabel.Name = "completedLabel";
+            completedLabel.Size = new System.Drawing.Size(60, 13);
+            completedLabel.TabIndex = 6;
+            completedLabel.Text = "Completed:";
+            // 
+            // clientLabel
+            // 
+            clientLabel.AutoSize = true;
+            clientLabel.Location = new System.Drawing.Point(20, 171);
+            clientLabel.Name = "clientLabel";
+            clientLabel.Size = new System.Drawing.Size(36, 13);
+            clientLabel.TabIndex = 10;
+            clientLabel.Text = "Client:";
+            // 
+            // productsLabel
+            // 
+            productsLabel.AutoSize = true;
+            productsLabel.Location = new System.Drawing.Point(20, 197);
+            productsLabel.Name = "productsLabel";
+            productsLabel.Size = new System.Drawing.Size(52, 13);
+            productsLabel.TabIndex = 12;
+            productsLabel.Text = "Products:";
             // 
             // requestsListBox
             // 
@@ -78,7 +130,6 @@
             this.requestsListBox.Name = "requestsListBox";
             this.requestsListBox.Size = new System.Drawing.Size(190, 264);
             this.requestsListBox.TabIndex = 0;
-            this.requestsListBox.SelectedIndexChanged += new System.EventHandler(this.requestsListBox_SelectedIndexChanged);
             // 
             // requestBindingSource
             // 
@@ -140,6 +191,8 @@
             // requestGroupBox
             // 
             this.requestGroupBox.BackColor = System.Drawing.Color.White;
+            this.requestGroupBox.Controls.Add(payedLabel);
+            this.requestGroupBox.Controls.Add(this.payedCheckBox);
             this.requestGroupBox.Controls.Add(requestIDLabel);
             this.requestGroupBox.Controls.Add(this.requestIDTextBox);
             this.requestGroupBox.Controls.Add(date_PlacedLabel);
@@ -148,19 +201,64 @@
             this.requestGroupBox.Controls.Add(this.priorityTextBox);
             this.requestGroupBox.Controls.Add(completedLabel);
             this.requestGroupBox.Controls.Add(this.completedCheckBox);
-            this.requestGroupBox.Controls.Add(payedLabel);
-            this.requestGroupBox.Controls.Add(this.payedCheckBox);
             this.requestGroupBox.Controls.Add(clientLabel);
             this.requestGroupBox.Controls.Add(this.clientTextBox);
             this.requestGroupBox.Controls.Add(productsLabel);
             this.requestGroupBox.Controls.Add(this.productsTextBox);
-            this.requestGroupBox.Controls.Add(paymentInfoLabel);
-            this.requestGroupBox.Controls.Add(this.paymentInfoTextBox);
             this.requestGroupBox.Location = new System.Drawing.Point(310, 53);
             this.requestGroupBox.Name = "requestGroupBox";
             this.requestGroupBox.Size = new System.Drawing.Size(240, 293);
             this.requestGroupBox.TabIndex = 5;
             this.requestGroupBox.TabStop = false;
+            // 
+            // requestIDTextBox
+            // 
+            this.requestIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "RequestID", true));
+            this.requestIDTextBox.Location = new System.Drawing.Point(98, 30);
+            this.requestIDTextBox.Name = "requestIDTextBox";
+            this.requestIDTextBox.Size = new System.Drawing.Size(124, 20);
+            this.requestIDTextBox.TabIndex = 1;
+            // 
+            // date_PlacedDateTimePicker
+            // 
+            this.date_PlacedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.requestBindingSource, "Date Placed", true));
+            this.date_PlacedDateTimePicker.Location = new System.Drawing.Point(98, 56);
+            this.date_PlacedDateTimePicker.Name = "date_PlacedDateTimePicker";
+            this.date_PlacedDateTimePicker.Size = new System.Drawing.Size(124, 20);
+            this.date_PlacedDateTimePicker.TabIndex = 3;
+            // 
+            // priorityTextBox
+            // 
+            this.priorityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Priority", true));
+            this.priorityTextBox.Location = new System.Drawing.Point(98, 82);
+            this.priorityTextBox.Name = "priorityTextBox";
+            this.priorityTextBox.Size = new System.Drawing.Size(124, 20);
+            this.priorityTextBox.TabIndex = 5;
+            // 
+            // completedCheckBox
+            // 
+            this.completedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.requestBindingSource, "Completed", true));
+            this.completedCheckBox.Location = new System.Drawing.Point(98, 108);
+            this.completedCheckBox.Name = "completedCheckBox";
+            this.completedCheckBox.Size = new System.Drawing.Size(124, 24);
+            this.completedCheckBox.TabIndex = 7;
+            this.completedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // clientTextBox
+            // 
+            this.clientTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Client", true));
+            this.clientTextBox.Location = new System.Drawing.Point(98, 168);
+            this.clientTextBox.Name = "clientTextBox";
+            this.clientTextBox.Size = new System.Drawing.Size(124, 20);
+            this.clientTextBox.TabIndex = 11;
+            // 
+            // productsTextBox
+            // 
+            this.productsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Products", true));
+            this.productsTextBox.Location = new System.Drawing.Point(98, 194);
+            this.productsTextBox.Name = "productsTextBox";
+            this.productsTextBox.Size = new System.Drawing.Size(124, 20);
+            this.productsTextBox.TabIndex = 13;
             // 
             // tableAdapterManager
             // 
@@ -173,75 +271,14 @@
             this.tableAdapterManager.RequestTableAdapter = this.requestTableAdapter;
             this.tableAdapterManager.UpdateOrder = Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // requestIDLabel
+            // label1
             // 
-            requestIDLabel.AutoSize = true;
-            requestIDLabel.Location = new System.Drawing.Point(20, 33);
-            requestIDLabel.Name = "requestIDLabel";
-            requestIDLabel.Size = new System.Drawing.Size(64, 13);
-            requestIDLabel.TabIndex = 0;
-            requestIDLabel.Text = "Request ID:";
-            // 
-            // requestIDTextBox
-            // 
-            this.requestIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "RequestID", true));
-            this.requestIDTextBox.Location = new System.Drawing.Point(98, 30);
-            this.requestIDTextBox.Name = "requestIDTextBox";
-            this.requestIDTextBox.Size = new System.Drawing.Size(124, 20);
-            this.requestIDTextBox.TabIndex = 1;
-            // 
-            // date_PlacedLabel
-            // 
-            date_PlacedLabel.AutoSize = true;
-            date_PlacedLabel.Location = new System.Drawing.Point(20, 60);
-            date_PlacedLabel.Name = "date_PlacedLabel";
-            date_PlacedLabel.Size = new System.Drawing.Size(69, 13);
-            date_PlacedLabel.TabIndex = 2;
-            date_PlacedLabel.Text = "Date Placed:";
-            // 
-            // date_PlacedDateTimePicker
-            // 
-            this.date_PlacedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.requestBindingSource, "Date Placed", true));
-            this.date_PlacedDateTimePicker.Location = new System.Drawing.Point(98, 56);
-            this.date_PlacedDateTimePicker.Name = "date_PlacedDateTimePicker";
-            this.date_PlacedDateTimePicker.Size = new System.Drawing.Size(124, 20);
-            this.date_PlacedDateTimePicker.TabIndex = 3;
-            // 
-            // priorityLabel
-            // 
-            priorityLabel.AutoSize = true;
-            priorityLabel.Location = new System.Drawing.Point(20, 85);
-            priorityLabel.Name = "priorityLabel";
-            priorityLabel.Size = new System.Drawing.Size(41, 13);
-            priorityLabel.TabIndex = 4;
-            priorityLabel.Text = "Priority:";
-            // 
-            // priorityTextBox
-            // 
-            this.priorityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Priority", true));
-            this.priorityTextBox.Location = new System.Drawing.Point(98, 82);
-            this.priorityTextBox.Name = "priorityTextBox";
-            this.priorityTextBox.Size = new System.Drawing.Size(124, 20);
-            this.priorityTextBox.TabIndex = 5;
-            // 
-            // completedLabel
-            // 
-            completedLabel.AutoSize = true;
-            completedLabel.Location = new System.Drawing.Point(20, 113);
-            completedLabel.Name = "completedLabel";
-            completedLabel.Size = new System.Drawing.Size(60, 13);
-            completedLabel.TabIndex = 6;
-            completedLabel.Text = "Completed:";
-            // 
-            // completedCheckBox
-            // 
-            this.completedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.requestBindingSource, "Completed", true));
-            this.completedCheckBox.Location = new System.Drawing.Point(98, 108);
-            this.completedCheckBox.Name = "completedCheckBox";
-            this.completedCheckBox.Size = new System.Drawing.Size(124, 24);
-            this.completedCheckBox.TabIndex = 7;
-            this.completedCheckBox.Text = "checkBox1";
-            this.completedCheckBox.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(556, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 52);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Priority\r\n0 = Low\r\n1 = Medium\r\n2 = High\r\n";
             // 
             // payedLabel
             // 
@@ -249,7 +286,7 @@
             payedLabel.Location = new System.Drawing.Point(20, 143);
             payedLabel.Name = "payedLabel";
             payedLabel.Size = new System.Drawing.Size(40, 13);
-            payedLabel.TabIndex = 8;
+            payedLabel.TabIndex = 13;
             payedLabel.Text = "Payed:";
             // 
             // payedCheckBox
@@ -257,66 +294,15 @@
             this.payedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.requestBindingSource, "Payed", true));
             this.payedCheckBox.Location = new System.Drawing.Point(98, 138);
             this.payedCheckBox.Name = "payedCheckBox";
-            this.payedCheckBox.Size = new System.Drawing.Size(124, 24);
-            this.payedCheckBox.TabIndex = 9;
-            this.payedCheckBox.Text = "checkBox1";
+            this.payedCheckBox.Size = new System.Drawing.Size(79, 24);
+            this.payedCheckBox.TabIndex = 14;
             this.payedCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // clientLabel
-            // 
-            clientLabel.AutoSize = true;
-            clientLabel.Location = new System.Drawing.Point(20, 171);
-            clientLabel.Name = "clientLabel";
-            clientLabel.Size = new System.Drawing.Size(36, 13);
-            clientLabel.TabIndex = 10;
-            clientLabel.Text = "Client:";
-            // 
-            // clientTextBox
-            // 
-            this.clientTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Client", true));
-            this.clientTextBox.Location = new System.Drawing.Point(98, 168);
-            this.clientTextBox.Name = "clientTextBox";
-            this.clientTextBox.Size = new System.Drawing.Size(124, 20);
-            this.clientTextBox.TabIndex = 11;
-            // 
-            // productsLabel
-            // 
-            productsLabel.AutoSize = true;
-            productsLabel.Location = new System.Drawing.Point(20, 197);
-            productsLabel.Name = "productsLabel";
-            productsLabel.Size = new System.Drawing.Size(52, 13);
-            productsLabel.TabIndex = 12;
-            productsLabel.Text = "Products:";
-            // 
-            // productsTextBox
-            // 
-            this.productsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "Products", true));
-            this.productsTextBox.Location = new System.Drawing.Point(98, 194);
-            this.productsTextBox.Name = "productsTextBox";
-            this.productsTextBox.Size = new System.Drawing.Size(124, 20);
-            this.productsTextBox.TabIndex = 13;
-            // 
-            // paymentInfoLabel
-            // 
-            paymentInfoLabel.AutoSize = true;
-            paymentInfoLabel.Location = new System.Drawing.Point(20, 223);
-            paymentInfoLabel.Name = "paymentInfoLabel";
-            paymentInfoLabel.Size = new System.Drawing.Size(72, 13);
-            paymentInfoLabel.TabIndex = 14;
-            paymentInfoLabel.Text = "Payment Info:";
-            // 
-            // paymentInfoTextBox
-            // 
-            this.paymentInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.requestBindingSource, "PaymentInfo", true));
-            this.paymentInfoTextBox.Location = new System.Drawing.Point(98, 220);
-            this.paymentInfoTextBox.Name = "paymentInfoTextBox";
-            this.paymentInfoTextBox.Size = new System.Drawing.Size(124, 20);
-            this.paymentInfoTextBox.TabIndex = 15;
             // 
             // RequestsUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.requestGroupBox);
             this.Controls.Add(this.addRequestButton);
             this.Controls.Add(this.myRequestsLabel);
@@ -348,10 +334,10 @@
         private System.Windows.Forms.DateTimePicker date_PlacedDateTimePicker;
         private System.Windows.Forms.TextBox priorityTextBox;
         private System.Windows.Forms.CheckBox completedCheckBox;
-        private System.Windows.Forms.CheckBox payedCheckBox;
         private System.Windows.Forms.TextBox clientTextBox;
         private System.Windows.Forms.TextBox productsTextBox;
-        private System.Windows.Forms.TextBox paymentInfoTextBox;
         private USANA_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox payedCheckBox;
     }
 }

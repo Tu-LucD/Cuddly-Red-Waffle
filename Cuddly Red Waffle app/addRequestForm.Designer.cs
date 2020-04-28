@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.addButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.clientLabel = new System.Windows.Forms.Label();
@@ -43,6 +44,12 @@
             this.completionComboBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.priorityComboBox = new System.Windows.Forms.ComboBox();
+            this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
+            this.requestBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.requestTableAdapter = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.RequestTableAdapter();
+            this.tableAdapterManager = new Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
@@ -200,11 +207,36 @@
             this.priorityComboBox.Size = new System.Drawing.Size(123, 21);
             this.priorityComboBox.TabIndex = 20;
             // 
+            // uSANA_DBDataSet
+            // 
+            this.uSANA_DBDataSet.DataSetName = "USANA_DBDataSet";
+            this.uSANA_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // requestBindingSource
+            // 
+            this.requestBindingSource.DataMember = "Request";
+            this.requestBindingSource.DataSource = this.uSANA_DBDataSet;
+            // 
+            // requestTableAdapter
+            // 
+            this.requestTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClientTableAdapter = null;
+            this.tableAdapterManager.HealthCategoryTableAdapter = null;
+            this.tableAdapterManager.OrdersTableAdapter = null;
+            this.tableAdapterManager.PaymentTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.RequestTableAdapter = this.requestTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Cuddly_Red_Waffle_app.USANA_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // addRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(324, 277);
             this.Controls.Add(this.priorityComboBox);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.completionComboBox);
@@ -222,6 +254,9 @@
             this.Controls.Add(this.addButton);
             this.Name = "addRequestForm";
             this.Text = "Add Request";
+            this.Load += new System.EventHandler(this.addRequestForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +279,9 @@
         private System.Windows.Forms.ComboBox completionComboBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox priorityComboBox;
+        private USANA_DBDataSet uSANA_DBDataSet;
+        private System.Windows.Forms.BindingSource requestBindingSource;
+        private USANA_DBDataSetTableAdapters.RequestTableAdapter requestTableAdapter;
+        private USANA_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
