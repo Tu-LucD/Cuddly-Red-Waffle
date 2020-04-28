@@ -25,7 +25,8 @@ namespace Cuddly_Red_Waffle_app
 
         private void addButton_Click(object sender, EventArgs e)
         {
-                
+            try
+            {
                 int productInOrder; // need to figure out how the user is supposed to input products in listbox
                 int totalPoints;
                 bool isPlaced;
@@ -69,8 +70,13 @@ namespace Cuddly_Red_Waffle_app
                 this.tableAdapterManager1.UpdateAll(this.usanA_DBDataSet1);
 
                 this.Close();
-            
-            
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show("Please make sure to input valid values. No empty values accepted", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void addOrderForm_Load(object sender, EventArgs e)
