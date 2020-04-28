@@ -8,7 +8,10 @@ namespace Cuddly_Red_Waffle_app.AppClasses
 {
     class Request
     {
-        private int requestID;
+
+        public USANA_DBDataSetTableAdapters.RequestTableAdapter RequestsTable =
+            new USANA_DBDataSetTableAdapters.RequestTableAdapter();
+        
         private int clientID;
         private int productsID;
         private DateTime datePlaced;
@@ -17,20 +20,24 @@ namespace Cuddly_Red_Waffle_app.AppClasses
         private bool isPayed;
         private int paymentID;
 
-        public Request(int requestID, int clientID, int productsID, DateTime datePlaced,
-            int priority, bool isCompleted, bool isPayed, int paymentID)
-        {
-            RequestID = requestID;
+        public Request(int clientID, int productsID, DateTime datePlaced,
+            int priority, bool isCompleted, bool isPayed)
+        {        
             ClientID = clientID;
             ProductsID = productsID;
             DatePlaced = datePlaced;
             Priority = priority;
             IsCompleted = isCompleted;
             IsPayed = isPayed;
-            PaymentID = paymentID;
         }
 
-        public int RequestID { get => requestID; set => requestID = value; }
+        public void CreateRequestRow()
+        {
+            RequestsTable.Insert(datePlaced,priority,isCompleted,isPayed,clientID,productsID,1);
+
+            RequestsTable.Update(RequestsTable.GetData());
+        }
+
         public int ClientID { get => clientID; set => clientID = value; }
         public int ProductsID { get => productsID; set => productsID = value; }
         public DateTime DatePlaced { get => datePlaced; set => datePlaced = value; }

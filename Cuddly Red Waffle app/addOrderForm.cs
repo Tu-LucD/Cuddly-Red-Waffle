@@ -68,9 +68,7 @@ namespace Cuddly_Red_Waffle_app
                 this.orderBindingSource.EndEdit();
                 this.tableAdapterManager1.UpdateAll(this.usanA_DBDataSet1);
 
-                this.Close();
-            
-            
+                this.Close();                        
         }
 
         private void addOrderForm_Load(object sender, EventArgs e)

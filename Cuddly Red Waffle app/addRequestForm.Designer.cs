@@ -36,15 +36,13 @@
             this.priorityLabel = new System.Windows.Forms.Label();
             this.completionStatusLabel = new System.Windows.Forms.Label();
             this.paymentStatusLabel = new System.Windows.Forms.Label();
-            this.paymentInfoLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.productsTextBox = new System.Windows.Forms.TextBox();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.clientNumberTextBox = new System.Windows.Forms.TextBox();
             this.paymentStatusComboBox = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.completionComboBox = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.priorityComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // addButton
@@ -129,35 +127,12 @@
             this.paymentStatusLabel.TabIndex = 7;
             this.paymentStatusLabel.Text = "Payment Status:";
             // 
-            // paymentInfoLabel
+            // productsTextBox
             // 
-            this.paymentInfoLabel.AutoSize = true;
-            this.paymentInfoLabel.Location = new System.Drawing.Point(35, 190);
-            this.paymentInfoLabel.Name = "paymentInfoLabel";
-            this.paymentInfoLabel.Size = new System.Drawing.Size(72, 13);
-            this.paymentInfoLabel.TabIndex = 8;
-            this.paymentInfoLabel.Text = "Payment Info:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(131, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(131, 112);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(123, 20);
-            this.textBox5.TabIndex = 13;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(131, 187);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(123, 20);
-            this.textBox7.TabIndex = 15;
+            this.productsTextBox.Location = new System.Drawing.Point(131, 62);
+            this.productsTextBox.Name = "productsTextBox";
+            this.productsTextBox.Size = new System.Drawing.Size(123, 20);
+            this.productsTextBox.TabIndex = 9;
             // 
             // headerLabel
             // 
@@ -173,15 +148,16 @@
             this.headerLabel.Text = "Input the request\'s information here!";
             this.headerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox4
+            // clientNumberTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(131, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(123, 20);
-            this.textBox4.TabIndex = 12;
+            this.clientNumberTextBox.Location = new System.Drawing.Point(131, 37);
+            this.clientNumberTextBox.Name = "clientNumberTextBox";
+            this.clientNumberTextBox.Size = new System.Drawing.Size(123, 20);
+            this.clientNumberTextBox.TabIndex = 12;
             // 
             // paymentStatusComboBox
             // 
+            this.paymentStatusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paymentStatusComboBox.FormattingEnabled = true;
             this.paymentStatusComboBox.Items.AddRange(new object[] {
             "Paid ",
@@ -191,38 +167,51 @@
             this.paymentStatusComboBox.Size = new System.Drawing.Size(123, 21);
             this.paymentStatusComboBox.TabIndex = 17;
             // 
-            // comboBox1
+            // completionComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Complete ",
+            this.completionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.completionComboBox.FormattingEnabled = true;
+            this.completionComboBox.Items.AddRange(new object[] {
+            "Complete",
             "Not complete"});
-            this.comboBox1.Location = new System.Drawing.Point(131, 137);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 21);
-            this.comboBox1.TabIndex = 18;
+            this.completionComboBox.Location = new System.Drawing.Point(131, 137);
+            this.completionComboBox.Name = "completionComboBox";
+            this.completionComboBox.Size = new System.Drawing.Size(123, 21);
+            this.completionComboBox.TabIndex = 18;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 87);
+            this.dateTimePicker1.MinDate = new System.DateTime(2020, 4, 27, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(123, 20);
             this.dateTimePicker1.TabIndex = 19;
+            // 
+            // priorityComboBox
+            // 
+            this.priorityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.priorityComboBox.FormattingEnabled = true;
+            this.priorityComboBox.Items.AddRange(new object[] {
+            "Low",
+            "Medium",
+            "High"});
+            this.priorityComboBox.Location = new System.Drawing.Point(131, 113);
+            this.priorityComboBox.Name = "priorityComboBox";
+            this.priorityComboBox.Size = new System.Drawing.Size(123, 21);
+            this.priorityComboBox.TabIndex = 20;
             // 
             // addRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.priorityComboBox);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.completionComboBox);
             this.Controls.Add(this.paymentStatusComboBox);
             this.Controls.Add(this.headerLabel);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.paymentInfoLabel);
+            this.Controls.Add(this.clientNumberTextBox);
+            this.Controls.Add(this.productsTextBox);
             this.Controls.Add(this.paymentStatusLabel);
             this.Controls.Add(this.completionStatusLabel);
             this.Controls.Add(this.priorityLabel);
@@ -248,14 +237,12 @@
         private System.Windows.Forms.Label priorityLabel;
         private System.Windows.Forms.Label completionStatusLabel;
         private System.Windows.Forms.Label paymentStatusLabel;
-        private System.Windows.Forms.Label paymentInfoLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox productsTextBox;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox clientNumberTextBox;
         private System.Windows.Forms.ComboBox paymentStatusComboBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox completionComboBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox priorityComboBox;
     }
 }

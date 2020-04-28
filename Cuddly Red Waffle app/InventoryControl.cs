@@ -33,7 +33,6 @@ namespace Cuddly_Red_Waffle_app
         private void InventoryControl_Load(object sender, EventArgs e)
         {
             this.productsTableAdapter.Fill(this.uSANA_DBDataSet.Products);
-
         }
 
         private void removeBtn_Click(object sender, EventArgs e)
