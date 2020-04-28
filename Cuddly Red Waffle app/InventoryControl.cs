@@ -37,10 +37,19 @@ namespace Cuddly_Red_Waffle_app
 
         private void removeBtn_Click(object sender, EventArgs e)
         {
-            this.productsTableAdapter.DeleteById(productsTableAdapter.GetData().ElementAt<USANA_DBDataSet.ProductsRow>
-                (this.productsListBox.SelectedIndex).ProductId);
-            this.productsTableAdapter.Update(this.uSANA_DBDataSet.Products);
-            InventoryControl_Load(sender, e);
+            try
+            {
+                this.productsTableAdapter.DeleteById(productsTableAdapter.GetData().ElementAt<USANA_DBDataSet.ProductsRow>
+                                (this.productsListBox.SelectedIndex).ProductId);
+                this.productsTableAdapter.Update(this.uSANA_DBDataSet.Products);
+                InventoryControl_Load(sender, e);
+            }
+            catch (SystemException)
+            {
+                MessageBox.Show("Coudn't delete", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void quantityNumericUpDown_ValueChanged(object sender, EventArgs e)
@@ -51,6 +60,20 @@ namespace Cuddly_Red_Waffle_app
             //InventoryControl_Load(sender, e);
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.productsBindingSource.EndEdit();
+                this.productsTableAdapter.Update(this.uSANA_DBDataSet.Products);
+            }
+            catch (SystemException)
+            {
+                MessageBox.Show("Coudn't update. Please check your values", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }
