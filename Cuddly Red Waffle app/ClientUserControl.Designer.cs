@@ -37,6 +37,7 @@
             this.phoneLabel = new System.Windows.Forms.Label();
             this.healthIDLabel = new System.Windows.Forms.Label();
             this.PersonalInfo = new System.Windows.Forms.GroupBox();
+            this.updateClient = new System.Windows.Forms.Button();
             this.clientIDTextBox = new System.Windows.Forms.TextBox();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSANA_DBDataSet = new Cuddly_Red_Waffle_app.USANA_DBDataSet();
@@ -57,7 +58,7 @@
             this.clientDetailsLabel = new System.Windows.Forms.Label();
             this.clientSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.updateClient = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             this.PersonalInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
@@ -150,6 +151,22 @@
             this.PersonalInfo.Size = new System.Drawing.Size(240, 276);
             this.PersonalInfo.TabIndex = 1;
             this.PersonalInfo.TabStop = false;
+            // 
+            // updateClient
+            // 
+            this.updateClient.BackColor = System.Drawing.SystemColors.Highlight;
+            this.updateClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.updateClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.updateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateClient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateClient.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.updateClient.Location = new System.Drawing.Point(29, 236);
+            this.updateClient.Name = "updateClient";
+            this.updateClient.Size = new System.Drawing.Size(73, 22);
+            this.updateClient.TabIndex = 18;
+            this.updateClient.Text = "Update";
+            this.updateClient.UseVisualStyleBackColor = false;
+            this.updateClient.Click += new System.EventHandler(this.updateClient_Click);
             // 
             // clientIDTextBox
             // 
@@ -326,27 +343,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // updateClient
+            // refreshButton
             // 
-            this.updateClient.BackColor = System.Drawing.SystemColors.Highlight;
-            this.updateClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.updateClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateClient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateClient.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.updateClient.Location = new System.Drawing.Point(29, 236);
-            this.updateClient.Name = "updateClient";
-            this.updateClient.Size = new System.Drawing.Size(73, 22);
-            this.updateClient.TabIndex = 18;
-            this.updateClient.Text = "Update";
-            this.updateClient.UseVisualStyleBackColor = false;
-            this.updateClient.Click += new System.EventHandler(this.updateClient_Click);
+            this.refreshButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.refreshButton.ForeColor = System.Drawing.Color.White;
+            this.refreshButton.Location = new System.Drawing.Point(247, 176);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(60, 20);
+            this.refreshButton.TabIndex = 18;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // ClientUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.clientSearch);
             this.Controls.Add(this.clientDetailsLabel);
@@ -402,5 +417,6 @@
         private System.Windows.Forms.TextBox clientSearch;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button updateClient;
+        private System.Windows.Forms.Button refreshButton;
     }
 }

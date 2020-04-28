@@ -27,5 +27,10 @@ namespace Cuddly_Red_Waffle_app
         {
             this.requestTableAdapter.Fill(this.uSANA_DBDataSet.Request);
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            RequestsUserControl_Load(sender, e);
+        }
     }
 }

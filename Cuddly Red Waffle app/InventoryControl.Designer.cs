@@ -55,6 +55,7 @@
             this.removeBtn = new System.Windows.Forms.Button();
             this.productDetailsLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.refreshButton = new System.Windows.Forms.Button();
             preferential_Price_With_TaxesLabel = new System.Windows.Forms.Label();
             retail_Price_With_TaxLabel = new System.Windows.Forms.Label();
             health_CategoryLabel = new System.Windows.Forms.Label();
@@ -336,10 +337,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // refreshButton
+            // 
+            this.refreshButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.refreshButton.ForeColor = System.Drawing.Color.White;
+            this.refreshButton.Location = new System.Drawing.Point(247, 176);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(60, 20);
+            this.refreshButton.TabIndex = 18;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
             // InventoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.productDetailsLabel);
             this.Controls.Add(this.removeBtn);
@@ -383,5 +398,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker restockDateTimePicker;
         private System.Windows.Forms.NumericUpDown quantityNumericUpDown;
+        private System.Windows.Forms.Button refreshButton;
     }
 }

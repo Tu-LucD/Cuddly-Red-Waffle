@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.searchBox = new System.Windows.Forms.TextBox();
             this.pagesPanel = new System.Windows.Forms.Panel();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.clientLabel = new System.Windows.Forms.Label();
@@ -38,13 +40,14 @@
             this.inventoryLabel = new System.Windows.Forms.Label();
             this.usanaLabel = new System.Windows.Forms.Label();
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.controlGroupBox = new System.Windows.Forms.GroupBox();
+            this.refreshPictureBox = new System.Windows.Forms.PictureBox();
             this.settingsPictureBox = new System.Windows.Forms.PictureBox();
             this.usanaPictureBox = new System.Windows.Forms.PictureBox();
-            this.controlGroupBox = new System.Windows.Forms.GroupBox();
-            this.searchBox = new System.Windows.Forms.TextBox();
             this.menuPanel.SuspendLayout();
             this.pagesPanel.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usanaPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +61,17 @@
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(180, 402);
             this.menuPanel.TabIndex = 1;
+            // 
+            // searchBox
+            // 
+            this.searchBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Search"});
+            this.searchBox.Location = new System.Drawing.Point(20, 34);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(120, 20);
+            this.searchBox.TabIndex = 4;
+            this.searchBox.Text = "Search";
+            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchOnEnter);
             // 
             // pagesPanel
             // 
@@ -116,9 +130,9 @@
             this.archiveLabel.ForeColor = System.Drawing.Color.White;
             this.archiveLabel.Location = new System.Drawing.Point(5, 180);
             this.archiveLabel.Name = "archiveLabel";
-            this.archiveLabel.Size = new System.Drawing.Size(61, 20);
+            this.archiveLabel.Size = new System.Drawing.Size(90, 20);
             this.archiveLabel.TabIndex = 7;
-            this.archiveLabel.Text = "Archive";
+            this.archiveLabel.Text = "Information";
             this.archiveLabel.Click += new System.EventHandler(this.archiveLabel_Click);
             // 
             // requestLabel
@@ -160,6 +174,7 @@
             // headerPanel
             // 
             this.headerPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.headerPanel.Controls.Add(this.refreshPictureBox);
             this.headerPanel.Controls.Add(this.settingsPictureBox);
             this.headerPanel.Controls.Add(this.usanaPictureBox);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -167,6 +182,24 @@
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(784, 40);
             this.headerPanel.TabIndex = 2;
+            // 
+            // controlGroupBox
+            // 
+            this.controlGroupBox.Location = new System.Drawing.Point(177, 40);
+            this.controlGroupBox.Name = "controlGroupBox";
+            this.controlGroupBox.Size = new System.Drawing.Size(607, 402);
+            this.controlGroupBox.TabIndex = 3;
+            this.controlGroupBox.TabStop = false;
+            // 
+            // refreshPictureBox
+            // 
+            this.refreshPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refreshPictureBox.Image")));
+            this.refreshPictureBox.Location = new System.Drawing.Point(684, 7);
+            this.refreshPictureBox.Name = "refreshPictureBox";
+            this.refreshPictureBox.Size = new System.Drawing.Size(30, 30);
+            this.refreshPictureBox.TabIndex = 2;
+            this.refreshPictureBox.TabStop = false;
+            this.refreshPictureBox.Click += new System.EventHandler(this.refreshPictureBox_Click);
             // 
             // settingsPictureBox
             // 
@@ -188,25 +221,6 @@
             this.usanaPictureBox.TabStop = false;
             this.usanaPictureBox.Click += new System.EventHandler(this.usanaPictureBox_Click);
             // 
-            // controlGroupBox
-            // 
-            this.controlGroupBox.Location = new System.Drawing.Point(177, 40);
-            this.controlGroupBox.Name = "controlGroupBox";
-            this.controlGroupBox.Size = new System.Drawing.Size(607, 402);
-            this.controlGroupBox.TabIndex = 3;
-            this.controlGroupBox.TabStop = false;
-            // 
-            // searchBox
-            // 
-            this.searchBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "Search"});
-            this.searchBox.Location = new System.Drawing.Point(20, 34);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(120, 20);
-            this.searchBox.TabIndex = 4;
-            this.searchBox.Text = "Search";
-            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchOnEnter);
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +238,7 @@
             this.pagesPanel.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usanaPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -246,6 +261,7 @@
         public System.Windows.Forms.GroupBox controlGroupBox;
         public System.Windows.Forms.PictureBox usanaPictureBox;
         public System.Windows.Forms.TextBox searchBox;
+        private System.Windows.Forms.PictureBox refreshPictureBox;
     }
 }
 

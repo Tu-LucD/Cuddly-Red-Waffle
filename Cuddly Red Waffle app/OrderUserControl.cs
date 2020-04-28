@@ -23,9 +23,6 @@ namespace Cuddly_Red_Waffle_app
             this.ordersTableAdapter.Fill(this.uSANA_DBDataSet.Orders);
         }
 
-  
-        
-
         private void addOrderButton_Click(object sender, EventArgs e)
         {
             addOrderForm add = new addOrderForm();
@@ -53,6 +50,11 @@ namespace Cuddly_Red_Waffle_app
             totalPointsLabel.Text = "Total Points: " + ordersTableAdapter.GetData().ElementAt<USANA_DBDataSet.OrdersRow>(this.orderListBox.SelectedIndex).Total_Points;
 
             estimatedDeliveryDate.Text = (ordersTableAdapter.GetData().ElementAt<USANA_DBDataSet.OrdersRow>(this.orderListBox.SelectedIndex).Arrival_Date).ToString();
+        }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            OrderPage_Load(sender, e);
         }
     }
 }

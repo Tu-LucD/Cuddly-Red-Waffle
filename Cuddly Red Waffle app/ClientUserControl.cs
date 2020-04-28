@@ -58,5 +58,10 @@ namespace Cuddly_Red_Waffle_app
             }
             
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            ClientUserControl_Load(sender, e);
+        }
     }
 }

@@ -75,5 +75,10 @@ namespace Cuddly_Red_Waffle_app
             }
             
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            InventoryControl_Load(sender, e);
+        }
     }
 }

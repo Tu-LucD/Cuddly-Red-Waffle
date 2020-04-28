@@ -101,5 +101,10 @@ namespace MenuInheritance
         {
 
         }
+
+        private void refreshPictureBox_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
