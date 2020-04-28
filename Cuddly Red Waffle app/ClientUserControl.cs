@@ -42,5 +42,21 @@ namespace Cuddly_Red_Waffle_app
             }
             
         }
+
+        private void updateClient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Validate();
+                this.clientBindingSource.EndEdit();
+                this.clientTableAdapter.Update(this.uSANA_DBDataSet.Client);
+            }
+            catch(SystemException ex)
+            {
+                MessageBox.Show("Unable to Update, please check records and try again", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }

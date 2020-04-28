@@ -62,8 +62,8 @@ namespace Cuddly_Red_Waffle_app
             controlGroupBox.Controls.Clear();
             controlGroupBox.Controls.Add(new mainPageUserControl());
 
-            if(connection.State == ConnectionState.Closed)
-                connection.Open();
+            //if(connection.State == ConnectionState.Closed)
+              //  connection.Open();
         }
 
         private void ordersLabel_Click(object sender, EventArgs e)

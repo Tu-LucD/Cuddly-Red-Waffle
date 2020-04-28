@@ -57,6 +57,7 @@
             this.clientDetailsLabel = new System.Windows.Forms.Label();
             this.clientSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.updateClient = new System.Windows.Forms.Button();
             this.PersonalInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSANA_DBDataSet)).BeginInit();
@@ -129,6 +130,7 @@
             // PersonalInfo
             // 
             this.PersonalInfo.BackColor = System.Drawing.Color.White;
+            this.PersonalInfo.Controls.Add(this.updateClient);
             this.PersonalInfo.Controls.Add(this.clientIDLabel);
             this.PersonalInfo.Controls.Add(this.clientIDTextBox);
             this.PersonalInfo.Controls.Add(this.first_NameLabel);
@@ -324,6 +326,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // updateClient
+            // 
+            this.updateClient.BackColor = System.Drawing.SystemColors.Highlight;
+            this.updateClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.updateClient.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.updateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateClient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateClient.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.updateClient.Location = new System.Drawing.Point(29, 236);
+            this.updateClient.Name = "updateClient";
+            this.updateClient.Size = new System.Drawing.Size(73, 22);
+            this.updateClient.TabIndex = 18;
+            this.updateClient.Text = "Update";
+            this.updateClient.UseVisualStyleBackColor = false;
+            this.updateClient.Click += new System.EventHandler(this.updateClient_Click);
+            // 
             // ClientUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,5 +401,6 @@
         private System.Windows.Forms.Label clientDetailsLabel;
         private System.Windows.Forms.TextBox clientSearch;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button updateClient;
     }
 }
